@@ -1,8 +1,19 @@
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import Skills from "./Components/Skills";
+import Work from "./Components/Work";
 import "./CSS/styles.css";
 function App() {
   return (
     <div className="App">
-      <p>test</p>
+      <Header />
+      <div className="main-container">
+        <Hero />
+        <Skills />
+        <Work />
+      </div>
+      <Footer />
     </div>
   );
 }
