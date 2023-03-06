@@ -1,21 +1,21 @@
 const Header = () => {
   return (
     <header>
-      <div class="header">
+      <div className="header">
         <h1>paula cavender</h1>
         <nav>
           <ul>
             <li>
-              <a href="#">home</a>
+              <a href="#hero">home</a>
             </li>
             <li>
-              <a href="#">tech stack</a>
+              <a href="#skills">skills</a>
             </li>
             <li>
-              <a href="#">work</a>
+              <a href="#work">work</a>
             </li>
             <li>
-              <a href="#">contact</a>
+              <a href="#contact">contact</a>
             </li>
           </ul>
         </nav>
