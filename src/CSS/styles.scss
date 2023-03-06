@@ -1,3 +1,119 @@
-p {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+/////////////// colours ///////////////
+$black: #000;
+$white: #fff;
+$light: #f6f0ff;
+$medium: #8380b6;
+$dark: #563f7b;
+$neon: #45f0df;
+
+/////////////// font sizes ///////////////
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 7rem;
+}
+h3 {
+  font-size: 4rem;
+}
+h4 {
+  font-size: 2rem;
+}
+p,
+button {
+  font-size: 1.6rem;
+}
+li {
+  font-size: 2rem;
+}
+
+/////////////// mixins ///////////////
+
+/////////////// header & footer ///////////////
+header,
+footer {
+  background-color: $medium;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+header {
+  height: 7.5rem;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  z-index: 100;
+}
+footer {
+  height: 20rem;
+}
+/////////////// nav ///////////////
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+a {
+  text-decoration: double;
+}
+
+/////////////// main-content section ///////////////
+body {
+  background-color: $light;
+}
+.main-container {
+  margin-top: 7.5rem;
+}
+
+/////////////// hero section ///////////////
+
+/////////////// skills section ///////////////
+.skills {
+  background-color: $dark;
+}
+/////////////// work section ///////////////
+
+/// ********* TABLET SCREEN ********* ///
+@media screen and (min-width: 768px) {
+  /////////////// header & footer ///////////////
+
+  /////////////// nav ///////////////
+
+  /////////////// main-content section ///////////////
+
+  /////////////// hero section ///////////////
+
+  /////////////// skills section ///////////////
+
+  /////////////// work section ///////////////
+}
+/// ********* LARGE MONITOR ********* ///
+@media screen and (min-width: 1024px) {
+  /////////////// header & footer ///////////////
+
+  /////////////// nav ///////////////
+
+  /////////////// main-content section ///////////////
+
+  /////////////// hero section ///////////////
+
+  /////////////// skills section ///////////////
+
+  /////////////// work section ///////////////
 }
