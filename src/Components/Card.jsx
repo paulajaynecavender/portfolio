@@ -1,28 +1,36 @@
+import myWork from "./work-data";
+
 const Card = () => {
+  console.log(myWork);
+
   return (
-    <div class="card">
-      <div class="inner-container">
-        <img src="./assets/weather.png" alt="weather" />
-        <div class="card-description">
-          <h4>weather app</h4>
-          <div class="stack">
-            <p>react</p>
-            <p>redux</p>
-            <p>restAPI</p>
+    <>
+      {myWork.map((work) => {
+        console.log(work.stack);
+        return (
+          <div key={work.id} className="card">
+            <div className="inner-container">
+              <img src={work.img} alt="weather" />
+              <div className="card-description">
+                <h4>{work.title}</h4>
+                <div className="stack">
+                  <p>{work.stack}</p>
+                </div>
+                <p className="info-text">{work.description}</p>
+                <div className="btn-container">
+                  <a className="button" href={work.live}>
+                    live
+                  </a>
+                  <a className="button" href={work.code}>
+                    code
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="info-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            minima temporibus facilis saepe, ratione nostrum numquam dolor est!
-            Odit obcaecati neque quas voluptatum doloribus quia saepe officiis
-            recusandae! Quos, atque.
-          </p>
-          <div class="btn-container">
-            <button>live</button>
-            <button>code</button>
-          </div>
-        </div>
-      </div>
-    </div>
+        );
+      })}
+    </>
   );
 };
 

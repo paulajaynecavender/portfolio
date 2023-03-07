@@ -98,8 +98,8 @@ a:visited {
 .nav-items {
   position: fixed;
   top: 7.5rem;
-  height: 55rem;
-  width: 115vw;
+  height: calc(100vh - 7.5rem);
+  width: 100vw;
   background-color: $medium;
   flex-direction: column;
   justify-content: space-evenly;
@@ -117,12 +117,13 @@ a:visited {
     padding: 0.5rem;
     @include swipe($light);
   }
-  a:hover {
+  a:hover,
+  a:active {
     @include swipe-hover($light);
   }
 }
 .nav-active {
-  transform: translateX(-80%);
+  transform: translateX(-92%);
   padding-left: 3rem;
   max-height: max-content;
 }
@@ -204,18 +205,16 @@ body {
   margin-top: 1rem;
 }
 
-button:active {
-  transform: scale(0.9);
-}
-
-button {
+.button {
   width: 5.5rem;
+  text-align: center;
   border: 1px black solid;
   background-color: $white;
   padding: 0.7rem 0.9rem;
   @include swipe($neon);
 }
-button:hover {
+.button:hover,
+.button:active {
   @include swipe-hover($neon);
 }
 
