@@ -46,6 +46,14 @@ h4 {
   justify-content: space-between;
   align-items: center;
 }
+@mixin swipe($value) {
+  box-shadow: inset 0 0 0 0 ($value);
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+@mixin swipe-hover($value) {
+  box-shadow: inset 200px 0 0 0 ($value);
+  cursor: pointer;
+}
 /////////////// header & footer ///////////////
 header,
 footer {
@@ -103,6 +111,14 @@ a:visited {
     font-size: 5rem;
     border-left: $light solid 0.5rem;
     padding-left: 2rem;
+  }
+  a {
+    color: none;
+    padding: 0.5rem;
+    @include swipe($light);
+  }
+  a:hover {
+    @include swipe-hover($light);
   }
 }
 .nav-active {
@@ -188,21 +204,19 @@ body {
   margin-top: 1rem;
 }
 
-button {
-  padding: 0.5rem 0.7rem;
-  border-radius: 5rem;
-  width: 6rem;
-  height: 3rem;
-  border: none;
-  background-color: $neon;
-}
-
-button:hover {
-  box-shadow: 0 0 1rem grey;
-  transition: 0.3s ease-in-out;
-}
 button:active {
   transform: scale(0.9);
+}
+
+button {
+  width: 5.5rem;
+  border: 1px black solid;
+  background-color: $white;
+  padding: 0.7rem 0.9rem;
+  @include swipe($neon);
+}
+button:hover {
+  @include swipe-hover($neon);
 }
 
 /// ********* TABLET SCREEN ********* ///
