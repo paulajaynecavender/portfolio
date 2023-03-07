@@ -2,7 +2,7 @@ const Card = () => {
   return (
     <div class="card">
       <div class="inner-container">
-        {/* <img src="./assets/weather.png" alt="weather" /> */}
+        <img src="./assets/weather.png" alt="weather" />
         <div class="card-description">
           <h4>weather app</h4>
           <div class="stack">
