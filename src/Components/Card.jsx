@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <>
       {myWork.map((work) => {
-        console.log(work.stack);
+        // console.log(work.stack);
         return (
           <div key={work.id} className="card">
             <div className="inner-container">
@@ -18,10 +18,20 @@ const Card = () => {
                 </div>
                 <p className="info-text">{work.description}</p>
                 <div className="btn-container">
-                  <a className="button" href={work.live}>
+                  <a
+                    className="button"
+                    href={work.live}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     live
                   </a>
-                  <a className="button" href={work.code}>
+                  <a
+                    className="button"
+                    href={work.code}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     code
                   </a>
                 </div>
