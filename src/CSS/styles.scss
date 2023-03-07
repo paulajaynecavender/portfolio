@@ -7,6 +7,9 @@ html {
   font-size: 62.5%;
   font-family: Abel, sans-serif;
 }
+body {
+  font-size: 1.6rem;
+}
 
 /////////////// colours ///////////////
 $black: #000;
@@ -29,13 +32,7 @@ h3 {
 h4 {
   font-size: 2rem;
 }
-p,
-button {
-  font-size: 1.6rem;
-}
-li {
-  font-size: 2rem;
-}
+
 h1,
 h2,
 h3,
@@ -44,19 +41,19 @@ h4 {
 }
 
 /////////////// mixins ///////////////
-
-/////////////// header & footer ///////////////
-header,
-footer {
-  background-color: $medium;
+@mixin flex-center-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+/////////////// header & footer ///////////////
+header,
+footer {
+  background-color: $medium;
+  @include flex-center-between;
+}
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-center-between;
   width: 100%;
   padding: 0 1.5rem;
 }
@@ -78,6 +75,39 @@ ul {
 }
 a {
   text-decoration: none;
+}
+a:visited {
+  color: $black;
+}
+.nav {
+  display: flex;
+  cursor: pointer;
+}
+
+//// mobile nav ////
+
+.nav-items {
+  position: fixed;
+  top: 7.5rem;
+  height: 90vh;
+  width: 90vw;
+  background-color: $medium;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5rem;
+  transform: translateX(100%);
+  transition: 1.5s ease-in-out;
+
+  li {
+    font-size: 5rem;
+    border-left: $light solid 0.5rem;
+    padding-left: 2rem;
+  }
+}
+.nav-active {
+  transform: translateX(-80%);
+  padding-left: 3rem;
+  max-height: max-content;
 }
 
 /////////////// main-content section ///////////////
@@ -101,6 +131,26 @@ body {
   /////////////// header & footer ///////////////
 
   /////////////// nav ///////////////
+  .nav-items {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .nav-items {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: none;
+    li {
+      font-size: 2.5rem;
+      border: none;
+    }
+  }
+  .menu-toggler {
+    display: none;
+  }
 
   /////////////// main-content section ///////////////
 

@@ -9,6 +9,10 @@ html {
   font-family: Abel, sans-serif;
 }
 
+body {
+  font-size: 1.6rem;
+}
+
 h1 {
   font-size: 2.5rem;
 }
@@ -22,15 +26,6 @@ h3 {
 }
 
 h4 {
-  font-size: 2rem;
-}
-
-p,
-button {
-  font-size: 1.6rem;
-}
-
-li {
   font-size: 2rem;
 }
 
@@ -79,6 +74,40 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #000;
+}
+
+.nav {
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-items {
+  position: fixed;
+  top: 7.5rem;
+  height: 90vh;
+  width: 90vw;
+  background-color: #8380b6;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5rem;
+  transform: translateX(100%);
+  transition: 1.5s ease-in-out;
+}
+.nav-items li {
+  font-size: 5rem;
+  border-left: #f6f0ff solid 0.5rem;
+  padding-left: 2rem;
+}
+
+.nav-active {
+  transform: translateX(-80%);
+  padding-left: 3rem;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+
 body {
   background-color: #f6f0ff;
 }
@@ -89,4 +118,26 @@ body {
 
 .skills {
   background-color: #563f7b;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-items {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-items {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: none;
+  }
+  .nav-items li {
+    font-size: 2.5rem;
+    border: none;
+  }
+  .menu-toggler {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
