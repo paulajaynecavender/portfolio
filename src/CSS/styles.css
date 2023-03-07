@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: Abel, sans-serif;
 }
 
 h1 {
@@ -31,6 +32,13 @@ button {
 
 li {
   font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: righteous, sans-serif;
 }
 
 header,
@@ -68,8 +76,7 @@ ul {
 }
 
 a {
-  -webkit-text-decoration: double;
-          text-decoration: double;
+  text-decoration: none;
 }
 
 body {
