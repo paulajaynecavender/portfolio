@@ -71,6 +71,39 @@ footer {
 }
 .footer {
   @include container-size;
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-box {
+  background-color: $light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  width: fit-content;
+  outline: 4px solid $black;
+  outline-offset: -7px;
+  box-shadow: 0px 0px 1rem black;
+  img {
+    width: 5rem;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  p {
+    @include swipe($neon);
+    padding: 1rem;
+  }
+
+  a:hover p {
+    @include swipe-hover($neon);
+  }
 }
 /////////////// nav ///////////////
 ul {
