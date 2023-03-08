@@ -71,10 +71,6 @@ footer {
 }
 .footer {
   @include container-size;
-  display: flex;
-  height: fit-content;
-  justify-content: space-between;
-  align-items: center;
 }
 .contact-box {
   background-color: $light;
@@ -316,7 +312,15 @@ footer {
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
-
+  .footer {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-box {
+    margin: initial;
+  }
   /////////////// nav ///////////////
   .nav-items {
     display: flex;

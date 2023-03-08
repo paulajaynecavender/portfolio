@@ -53,11 +53,6 @@ footer {
   width: 100%;
   height: 100%;
   margin: 0 1rem;
-  display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .contact-box {
@@ -322,6 +317,16 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-box {
+    margin: initial;
+  }
   .nav-items {
     display: flex;
     cursor: pointer;
