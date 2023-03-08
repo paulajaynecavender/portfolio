@@ -205,6 +205,9 @@ body {
   @include container-size;
   padding: 4rem 0;
 }
+h4 {
+  font-size: 2rem;
+}
 
 .cards-container {
   display: flex;
@@ -232,7 +235,7 @@ body {
   overflow: hidden;
   img {
     border-bottom: 0.4rem solid black;
-    width: 23.2rem;
+    width: 22.5rem;
   }
 }
 .card-description {
@@ -240,7 +243,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30rem;
+  height: auto;
 }
 .info-text {
   padding: 0.5rem 0;
@@ -291,6 +294,15 @@ footer {
 }
 .contact-container {
   @include container-size;
+  .created-by {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: $light;
+    width: 30rem;
+    margin: 0 auto;
+  }
 }
 .contact-box {
   background-color: $light;
@@ -320,7 +332,17 @@ footer {
     @include swipe-hover($neon);
   }
 }
-
+.link {
+  @include swipe($neon);
+  padding: 0.5rem;
+  width: fit-content;
+  color: $light;
+  text-decoration: underline;
+}
+.link:hover {
+  @include swipe-hover($neon);
+  color: $black;
+}
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
@@ -388,9 +410,12 @@ footer {
     align-items: center;
     flex-direction: row;
     padding-right: 6rem;
+    .created-by {
+      margin: 0;
+    }
   }
   .contact-box {
-    margin: initial;
+    margin: 0 1rem;
   }
 }
 

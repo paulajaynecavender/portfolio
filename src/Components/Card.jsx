@@ -1,6 +1,8 @@
 import myWork from "./work-data";
 
 const Card = () => {
+  console.log(myWork);
+
   return (
     <>
       {myWork.map((work) => {
