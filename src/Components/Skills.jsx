@@ -2,11 +2,47 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="skills-container">
-        <h3>tech stack skills</h3>
-        {/* <a href="https://skillicons.dev">
-          <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,react,redux,github,git&perline=4" />
-          <h1>include names of each</h1>
-        </a> */}
+        <h3 className="title skills-title">tech stack skills</h3>
+        <div className="icons-grid">
+          <div>
+            <img src="https://skillicons.dev/icons?i=html" alt="html icon" />
+            <p>HTML</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=css" alt="css icon" />
+            <p>CSS</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=sass" alt="sass icon" />
+            <p>SASS</p>
+          </div>
+          <div>
+            <img
+              src="https://skillicons.dev/icons?i=javascript"
+              alt="javascript icon"
+            />
+            <p>JavaScript</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=react" alt="react icon" />
+            <p>React</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=redux" alt="redux icon" />
+            <p>Redux</p>
+          </div>
+          <div>
+            <img
+              src="https://skillicons.dev/icons?i=github"
+              alt="github icon"
+            />
+            <p>GitHub</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=git" alt="git icon" />
+            <p>Git</p>
+          </div>
+        </div>
       </div>
     </section>
   );
