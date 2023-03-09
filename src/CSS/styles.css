@@ -73,12 +73,14 @@ a:visited {
 .nav-items {
   position: fixed;
   top: 7.5rem;
+  left: 0;
   height: calc(100vh - 7.5rem);
-  width: 110vw;
+  width: 100%;
+  padding-left: 3rem;
   background-color: #8380b6;
   flex-direction: column;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   transform: translateX(100%);
   transition: 1.5s ease-in-out;
 }
@@ -100,10 +102,7 @@ a:visited {
 }
 
 .nav-active {
-  transform: translateX(-82%);
-  padding-left: 3rem;
-  max-height: -moz-max-content;
-  max-height: max-content;
+  transform: translateX(0%);
 }
 
 .menu-toggler {
@@ -111,6 +110,11 @@ a:visited {
 }
 .menu-toggler img {
   height: 3rem;
+}
+
+.blur {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 body {
@@ -133,19 +137,19 @@ body {
 
 .hero-name {
   font-size: 7rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-shadow: 0px 0px 1rem #8380b6;
 }
 
 .hero-title {
   font-size: 5rem;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   text-shadow: 0px 0px 1rem #8380b6;
 }
 
 .hero-text {
   font-size: 2rem;
-  padding: 2rem 3rem;
+  padding: 1.5rem 3rem;
 }
 
 .skills {
