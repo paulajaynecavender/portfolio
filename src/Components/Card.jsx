@@ -12,10 +12,10 @@ const Card = () => {
               <img src={work.img} alt="weather" />
               <div className="card-description">
                 <h4>{work.title}</h4>
+                <p className="info-text">{work.description}</p>
                 <div className="stack">
                   <p>{work.stack}</p>
                 </div>
-                <p className="info-text">{work.description}</p>
                 <div className="btn-container">
                   <a
                     className="button"

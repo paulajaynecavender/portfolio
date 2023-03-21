@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="contact">
       <div className="contact-container">
-        <h3 className="title contact-title">contact me</h3>
+        {/* <h3 className="title contact-title">contact me</h3> */}
 
         <div className="contact-box">
           <a

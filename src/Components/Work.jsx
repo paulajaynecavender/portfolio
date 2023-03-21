@@ -6,6 +6,7 @@ const Work = () => {
     <section className="work" id="work">
       <div className="container">
         <h3 className="title work-title">my projects</h3>
+
         <div className="cards-container">
           <Card />
         </div>

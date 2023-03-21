@@ -63,7 +63,10 @@ h1 {
   position: absolute;
   top: -33rem;
   background: rgb(128, 255, 219);
-  background: linear-gradient(122deg, rgba(128, 255, 219, 0.9) 0%, rgba(86, 207, 225, 0.9) 29%, rgba(83, 144, 217, 0.9) 62%, rgba(116, 0, 184, 0.9) 100%);
+  background: linear-gradient(122deg, rgba(128, 255, 219, 0.85) 0%, rgba(86, 207, 225, 0.85) 29%, rgba(83, 144, 217, 0.85) 62%, rgba(116, 0, 184, 0.85) 100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
 ul {
@@ -128,17 +131,16 @@ a:visited {
   height: 3rem;
 }
 
-.blur {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-
 body {
   background-color: #fff;
+  background-image: url("./waves.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .main-container {
-  margin-top: 7.5rem;
+  margin-top: 15rem;
 }
 
 .title {
@@ -147,22 +149,16 @@ body {
 }
 
 .container {
-  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7rem);
+  -webkit-backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  width: 70vw;
+  padding: 2rem;
 }
 
-.container::after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  background-color: #6930c3;
-}
-
-.hero {
-  height: calc(100vh - 7.5rem);
+section {
+  margin-bottom: 10rem;
 }
 
 .hero-name {
@@ -177,7 +173,6 @@ body {
 
 .hero-text {
   font-size: 2rem;
-  padding: 1.5rem 3rem;
 }
 
 .underline {
@@ -194,10 +189,6 @@ body {
   left: 0;
   right: 0;
   background-color: #6930c3;
-}
-
-.skills {
-  height: 40rem;
 }
 
 .skills-container {
@@ -251,10 +242,6 @@ body {
   padding-top: 0.3rem;
 }
 
-.work {
-  min-height: calc(100vh - 7.5rem);
-}
-
 .work-container {
   width: 100%;
   height: 100%;
@@ -280,11 +267,13 @@ h4 {
   min-width: 30rem;
   max-width: 30rem;
   height: 450px;
-  background-color: white;
-  border-radius: 20px;
   overflow: hidden;
   margin: 20px;
-  box-shadow: 0px 0px 10px black;
+  border-radius: 5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
 .inner-container {
@@ -299,7 +288,7 @@ h4 {
 }
 
 .card-description {
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 0rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -308,6 +297,7 @@ h4 {
 
 .info-text {
   padding: 0.5rem 0;
+  font-size: 1.4rem;
 }
 
 .stack {
@@ -354,6 +344,12 @@ footer {
 
 .contact {
   height: 40rem;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
 .contact-container {
@@ -369,13 +365,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  color: #7400b8;
+  color: #000;
   width: 30rem;
   margin: 0 auto;
 }
 
 .contact-box {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,9 +378,7 @@ footer {
   padding: 2rem;
   width: -moz-fit-content;
   width: fit-content;
-  outline: 4px solid #000;
-  outline-offset: -7px;
-  box-shadow: 0px 0px 1rem black;
+  /* From https://css.glass */
 }
 .contact-box img {
   width: 5rem;
@@ -412,14 +405,13 @@ footer {
   padding: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
-  color: #7400b8;
+  color: #000;
   text-decoration: underline;
 }
 
 .link:hover {
   box-shadow: inset 200px 0 0 0 #80ffdb;
   cursor: pointer;
-  color: #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -478,7 +470,7 @@ footer {
   .contact-container {
     height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     padding-right: 6rem;

@@ -3,6 +3,7 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="container">
         <h3 className="title skills-title">tech stack skills</h3>
+
         <div className="icons-grid">
           <div>
             <img src="https://skillicons.dev/icons?i=html" alt="html icon" />

@@ -59,6 +59,16 @@ h4 {
   flex-direction: column;
   justify-content: center;
 }
+
+@mixin box-blur {
+  // background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+@mixin border-radius {
+  border-radius: 5rem;
+}
 /////////////// header & footer ///////////////
 header,
 footer {
@@ -96,11 +106,14 @@ h1 {
   background: rgb(128, 255, 219);
   background: linear-gradient(
     122deg,
-    rgba(128, 255, 219, 0.9) 0%,
-    rgba(86, 207, 225, 0.9) 29%,
-    rgba(83, 144, 217, 0.9) 62%,
-    rgba(116, 0, 184, 0.9) 100%
+    rgba(128, 255, 219, 0.85) 0%,
+    rgba(86, 207, 225, 0.85) 29%,
+    rgba(83, 144, 217, 0.85) 62%,
+    rgba(116, 0, 184, 0.85) 100%
   );
+  @include box-blur;
+  // backdrop-filter: blur(5px);
+  // -webkit-backdrop-filter: blur(5px);
 }
 // .nav-brand {
 
@@ -166,40 +179,37 @@ a:visited {
   }
 }
 
-.blur {
-  backdrop-filter: blur(10px);
-}
-
 /////////////// main-content section ///////////////
 body {
-  background-color: #fff;
+  background-color: $white;
+  background-image: url("./waves.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 .main-container {
-  margin-top: 7.5rem;
+  margin-top: 15rem;
 }
 .title {
   font-size: 3rem;
-  // text-shadow: 0px 0px 1rem $medium;
   padding: 0 1rem 3rem 1rem;
 }
+
 .container {
-  position: relative;
+  @include box-blur;
+  @include border-radius;
+  width: 70vw;
+  padding: 2rem;
 }
-.container::after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  background-color: $medium;
+section {
+  margin-bottom: 10rem;
 }
 
 /////////////// hero section ///////////////
-.hero {
-  height: calc(100vh - 7.5rem);
-}
+// .hero {
+
+// }
 .hero-name {
   font-size: 7rem;
   padding: 1rem 2rem;
@@ -212,7 +222,7 @@ body {
 }
 .hero-text {
   font-size: 2rem;
-  padding: 1.5rem 3rem;
+  // padding: 1.5rem 3rem;
 }
 .underline {
   position: relative;
@@ -230,10 +240,9 @@ body {
 }
 
 /////////////// skills section ///////////////
-.skills {
-  // background-color: $dark;
-  height: 40rem;
-}
+// .skills {
+
+// }
 .skills-container {
   @include container-size;
 }
@@ -286,10 +295,8 @@ body {
 }
 
 /////////////// work section ///////////////
-.work {
-  min-height: calc(100vh - 7.5rem);
-  // min-height: 70rem;
-}
+// .work {
+// }
 .work-container {
   @include container-size;
   padding: 4rem 0;
@@ -330,11 +337,11 @@ h4 {
   min-width: 30rem;
   max-width: 30rem;
   height: 450px;
-  background-color: white;
-  border-radius: 20px;
   overflow: hidden;
   margin: 20px;
-  box-shadow: 0px 0px 10px black;
+  @include border-radius;
+  background-color: $white;
+  @include box-blur;
 }
 .inner-container {
   min-width: 30rem;
@@ -348,7 +355,7 @@ h4 {
 }
 
 .card-description {
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 0rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -362,6 +369,7 @@ h4 {
 
 .info-text {
   padding: 0.5rem 0;
+  font-size: 1.4rem;
 }
 /// stack names ///
 .stack {
@@ -406,6 +414,10 @@ footer {
 .contact {
   // background-color: $dark;
   height: 40rem;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  background: rgba(255, 255, 255, 0.18);
+  @include box-blur;
 }
 .contact-container {
   @include container-size;
@@ -414,22 +426,23 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    color: $dark;
+    color: $black;
     width: 30rem;
     margin: 0 auto;
   }
 }
 .contact-box {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding: 2rem;
   width: fit-content;
-  outline: 4px solid $black;
-  outline-offset: -7px;
-  box-shadow: 0px 0px 1rem black;
+  // outline: 4px solid $black;
+  // outline-offset: -7px;
+  // @include box-shadow;
+  /* From https://css.glass */
+
   img {
     width: 5rem;
   }
@@ -451,12 +464,11 @@ footer {
   @include swipe($neon);
   padding: 0.5rem;
   width: fit-content;
-  color: $dark;
+  color: $black;
   text-decoration: underline;
 }
 .link:hover {
   @include swipe-hover($neon);
-  color: $black;
 }
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
@@ -527,7 +539,7 @@ footer {
   /////////////// contact section ///////////////
   .contact-container {
     height: fit-content;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     padding-right: 6rem;
