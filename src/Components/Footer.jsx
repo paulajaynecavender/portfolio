@@ -10,7 +10,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={"./assets/icons/email2.svg"} alt="email"></img>
+            <img src={"./assets/icons/email.svg"} alt="email"></img>
             <p>paula.cavender@gmail.com</p>
           </a>
           <a
@@ -18,7 +18,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={"./assets/icons/github2.svg"} alt="github"></img>
+            <img src={"./assets/icons/github.svg"} alt="github"></img>
             <p>paulajaynecavender</p>
           </a>
           <a
@@ -26,7 +26,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={"./assets/icons/linkedin2.svg"} alt="linkedin"></img>
+            <img src={"./assets/icons/linkedin.svg"} alt="linkedin"></img>
             <p>paulacavender</p>
           </a>
         </div>

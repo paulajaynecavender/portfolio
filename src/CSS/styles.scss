@@ -73,20 +73,13 @@ footer {
   padding: 0 1.5rem;
 }
 header {
-  // height: 7.5rem;
   position: fixed;
   top: 0;
   min-width: 100%;
   z-index: 100;
-
-  // background-color: $medium;
-  // position: relative;
 }
 h1 {
-  font-size: 5.5rem;
-  // position: absolute;
-  // top: 32rem;
-  // left: 30rem;
+  font-size: 4.2rem;
 }
 
 .circle {
@@ -95,12 +88,19 @@ h1 {
   align-items: flex-end;
   padding-bottom: 5rem;
   height: 45rem;
-  width: 85rem;
-  background-color: $light;
+  width: 75rem;
   border-radius: 55%;
   position: absolute;
   top: -33rem;
-  left: -10rem;
+  // left: -10rem;
+  background: rgb(128, 255, 219);
+  background: linear-gradient(
+    122deg,
+    rgba(128, 255, 219, 0.9) 0%,
+    rgba(86, 207, 225, 0.9) 29%,
+    rgba(83, 144, 217, 0.9) 62%,
+    rgba(116, 0, 184, 0.9) 100%
+  );
 }
 // .nav-brand {
 
@@ -243,17 +243,42 @@ body {
   div {
     margin: 0.7rem auto;
     padding: 1.2rem;
-    width: 8rem;
+    width: 9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    outline: 4px solid $black;
-    outline-offset: -7px;
-    box-shadow: 0px 0px 1rem black;
+    // outline: 4px solid $black;
+    // outline-offset: -7px;
+    // box-shadow: 0px 0px 1rem black;
     img {
       width: 4rem;
     }
   }
+  div:hover {
+    animation: shake 0.4s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: 1;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px);
+    }
+    25% {
+      transform: translate(-2px, -1px);
+    }
+    50% {
+      transform: translate(3px, 1px);
+    }
+    75% {
+      transform: translate(4px, -1px);
+    }
+    100% {
+      transform: translate(2px, 1px);
+    }
+  }
+
   p {
     font-size: 1.4rem;
     padding-top: 0.3rem;
@@ -436,7 +461,12 @@ footer {
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
-
+  .circle {
+    width: 100%;
+  }
+  h1 {
+    font-size: 5.5rem;
+  }
   /////////////// nav ///////////////
 
   .nav-items {
