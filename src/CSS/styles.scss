@@ -62,8 +62,8 @@ h4 {
 
 @mixin box-blur {
   // background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.7rem);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(1rem);
 }
 @mixin border-radius {
@@ -79,7 +79,6 @@ footer {
 }
 .header {
   @include flex-center-between;
-  width: 100%;
   padding: 0 1.5rem;
 }
 header {
@@ -112,8 +111,6 @@ h1 {
     rgba(116, 0, 184, 0.85) 100%
   );
   @include box-blur;
-  // backdrop-filter: blur(5px);
-  // -webkit-backdrop-filter: blur(5px);
 }
 // .nav-brand {
 
@@ -199,11 +196,13 @@ body {
 .container {
   @include box-blur;
   @include border-radius;
-  width: 70vw;
+  width: 95%;
+  margin: 2rem;
   padding: 2rem;
+  background: rgba(255, 255, 255, 0.18);
 }
 section {
-  margin-bottom: 10rem;
+  margin: 10rem auto;
 }
 
 /////////////// hero section ///////////////
@@ -265,8 +264,6 @@ section {
   }
   div:hover {
     animation: shake 0.4s;
-
-    /* When the animation is finished, start again */
     animation-iteration-count: 1;
   }
 
@@ -311,41 +308,19 @@ h4 {
   align-items: center;
   margin: 0 auto;
 }
-// .card {
-//   min-width: 24rem;
-//   max-width: 24rem;
-//   height: 50rem;
-//   margin-bottom: 2rem;
-//   background-color: white;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   box-shadow: 0px 0px 1rem black;
-// }
-//.inner-container {
-//   min-width: 23rem;
-//   max-width: 23rem;
-//   height: 49rem;
-//   border: 0.4rem solid black;
-//   overflow: hidden;
-//   img {
-//     border-bottom: 0.4rem solid black;
-//     width: 22.5rem;
-//   }
-// }
+
 .card {
-  min-width: 30rem;
-  max-width: 30rem;
-  height: 450px;
+  width: 30rem;
+  height: 45rem;
   overflow: hidden;
-  margin: 20px;
+  margin: 1.5rem;
   @include border-radius;
   background-color: $white;
   @include box-blur;
+  backdrop-filter: blur(0);
 }
 .inner-container {
-  min-width: 30rem;
-  max-width: 30rem;
+  width: 30rem;
   height: 49rem;
   overflow: hidden;
   img {
@@ -360,16 +335,21 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  // background-color: $light;
-  // border-top-right-radius: 15rem;
-  // border-top-left-radius: 15rem;
-  // position: absolute;
-  // top: 12rem;
 }
 
 .info-text {
   padding: 0.5rem 0;
   font-size: 1.4rem;
+  position: relative;
+}
+.info-text::after {
+  position: absolute;
+  content: "";
+  height: 0.1rem;
+  width: 100%;
+  background-color: #000;
+  bottom: 0rem;
+  left: 0;
 }
 /// stack names ///
 .stack {
@@ -501,7 +481,9 @@ footer {
   }
 
   /////////////// main-content section ///////////////
+  // .container {
 
+  // }
   /////////////// hero section ///////////////
 
   /////////////// skills section ///////////////
@@ -552,7 +534,7 @@ footer {
   }
 }
 
-/// ********* LARGE MONITOR ********* ///
+/// ********* LAPTOP MONITOR ********* ///
 @media screen and (min-width: 1024px) {
   /////////////// header & footer ///////////////
 
@@ -575,17 +557,21 @@ footer {
   }
   /////////////// skills section ///////////////
 
-  .cards-container {
-    width: auto;
-    margin: initial;
-  }
+  // .cards-container {
+  //   width: auto;
+  //   margin: initial;
+  // }
   /////////////// work section ///////////////
 
   //// max-width set ////
   .container,
-  .work-container,
-  .header,
-  .contact-container {
-    max-width: 120rem;
+  .header {
+    width: 150rem;
+  }
+}
+/// ********* LARGE MONITOR ********* ///
+@media screen and (min-width: 1440px) {
+  .cards-container {
+    width: 137rem;
   }
 }
