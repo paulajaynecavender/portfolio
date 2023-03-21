@@ -21,7 +21,7 @@ const NavBar = () => {
         </li>
         <li>
           <a href="#work" onClick={onClick}>
-            work
+            projects
           </a>
         </li>
         <li>

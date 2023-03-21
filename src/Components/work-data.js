@@ -2,6 +2,7 @@ const myWork = [
   {
     id: 1,
     title: "weather app",
+    // stack: { 1: "react", 2: "redux", 3: "restAPI" },
     stack: "react, redux, restAPI",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ",

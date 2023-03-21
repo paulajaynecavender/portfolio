@@ -1,15 +1,13 @@
-import NavBar from "./NavBar";
+// import NavBar from "./NavBar";
 
 const Header = () => {
   return (
     <header>
-      <div className="header">
-        <div className="nav_brand">
+      <div className="header circle">
+        <div className="nav_brand ">
           <h1>paula cavender</h1>
         </div>
-        <div className="navbar-container">
-          <NavBar />
-        </div>
+        <div className="navbar-container">{/* <NavBar /> */}</div>
       </div>
     </header>
   );
