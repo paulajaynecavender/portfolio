@@ -28,9 +28,9 @@ $white: #fff;
 // $dark: #563f7b;
 // $neon: #45f0df;
 
-$light: #ddeeeb;
-$medium: #6166bb;
-$dark: #388b89;
+$light: #dbf2f5;
+$medium: #2a8e98;
+$dark: #6166bb;
 
 /////////////// fonts ///////////////
 
@@ -71,7 +71,7 @@ h4 {
   -webkit-backdrop-filter: blur(1rem);
 }
 @mixin border-radius {
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 
 @mixin link-container {
@@ -92,6 +92,7 @@ h4 {
 }
 @mixin link-hover {
   width: 100%;
+  border-radius: 1rem;
 }
 
 /////////////// header & footer ///////////////
@@ -123,9 +124,9 @@ h1 {
   height: 8rem;
   width: 100%;
   background-color: $dark;
-  border-bottom-left-radius: 10rem;
-  border-bottom-right-radius: 10rem;
-  padding-bottom: 1rem;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  padding-bottom: 2rem;
 }
 
 /////////////// nav ///////////////
@@ -247,20 +248,21 @@ a:visited {
 }
 
 .hero-headline-container {
-  margin: 0 auto;
-}
-.hero-headline {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin: auto 0;
 }
 .hero-img-container {
-  margin: 0 auto;
   padding: 2rem;
+  margin: 0 auto;
 }
 .hero-img {
-  width: 20rem;
+  width: 15rem;
 }
-// .hero-description{}
+.hero-description {
+  display: flex;
+  align-items: center;
+}
 h2 {
   font-size: 2.8rem;
 }
@@ -445,8 +447,8 @@ footer {
 .contact {
   // background-color: $dark;
   height: 40rem;
-  border-top-left-radius: 10rem;
-  border-top-right-radius: 10rem;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
   background: rgba(255, 255, 255, 0.18);
   @include box-blur;
 }
@@ -536,20 +538,30 @@ footer {
   .hero .container {
     flex-direction: row;
   }
-  .hero-headline {
-    flex-direction: row;
+  .hero-headline-container {
+    order: 1;
+    width: 80rem;
+    flex-basis: 35%;
+  }
+  .hero-description {
+    order: 2;
+    padding-left: 2rem;
+    flex-basis: 50%;
+  }
+  .hero-img-container {
+    order: 3;
+    padding: 2rem 0 2rem 2rem;
+    flex-basis: 150px;
   }
 
-  .hero-img {
-    width: 25rem;
-  }
   /////////////// skills section ///////////////
-  .skills .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-  }
+  // .skills .container {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   gap: 4rem;
+  // }
   .icons-grid {
     gap: 3rem;
     div {
@@ -613,18 +625,23 @@ footer {
     max-width: 100rem;
     margin: 0 auto;
   }
+  // .hero-img {
+  //   width: 25rem;
+  // }
   /////////////// skills section ///////////////
 
   /////////////// work section ///////////////
-
-  //// max-width set ////
-  .container {
-    max-width: 150rem;
-  }
 }
 /// ********* LARGE MONITOR ********* ///
 @media screen and (min-width: 1440px) {
   .cards-container {
     width: 137rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  //// max-width set ////
+  .container {
+    width: 140rem;
   }
 }
