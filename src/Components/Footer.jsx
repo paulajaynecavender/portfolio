@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="contact">
       <div className="container">
-        <h3 className="title contact-title">contact me</h3>
+        <h3 className="title contact-title">Contact Me</h3>
 
         <div className="contact-container ">
           <div className="contact-box">
