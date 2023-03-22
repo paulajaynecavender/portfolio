@@ -405,18 +405,18 @@ footer {
   }
   .hero-headline-container {
     order: 1;
-    width: 80rem;
-    flex-basis: 35%;
+  }
+  .hero-headline-container p {
+    width: -moz-max-content;
+    width: max-content;
   }
   .hero-description {
     order: 2;
     padding-left: 2rem;
-    flex-basis: 50%;
   }
   .hero-img-container {
     order: 3;
     padding: 2rem 0 2rem 2rem;
-    flex-basis: 150px;
   }
   .icons-grid {
     gap: 3rem;
