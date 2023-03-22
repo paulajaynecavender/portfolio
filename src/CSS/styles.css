@@ -331,7 +331,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding-bottom: 2rem;
   width: -moz-fit-content;
   width: fit-content;
 }
