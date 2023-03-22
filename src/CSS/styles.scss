@@ -14,23 +14,10 @@ body {
 }
 
 /////////////// colours ///////////////
-// $black: #000;
-// $white: #fff;
-// $light: #64dfdf;
-// $medium: #6930c3;
-// $dark: #7400b8;
-// $neon: #80ffdb;
 
-$black: #000;
-$white: #fff;
-// $light: #f6f0ff;
-// $medium: #8380b6;
-// $dark: #563f7b;
-// $neon: #45f0df;
-
-$light: #dbf2f5;
-$medium: #2a8e98;
-$dark: #6166bb;
+$dominant: #fff;
+$complementary: #7464b2;
+$accent: #00c89e;
 
 /////////////// fonts ///////////////
 
@@ -46,22 +33,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-// @mixin swipe {
-//   box-shadow: inset 0 0 0 0 $medium;
-//   transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
-// }
-// @mixin swipe-hover {
-//   box-shadow: inset 200px 0 0 0 $medium;
-//   cursor: pointer;
-// }
-@mixin container-size {
-  width: 100%;
-  height: 100%;
-  margin: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 @mixin box-blur {
@@ -81,17 +52,17 @@ h4 {
 @mixin link-after {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 0.2rem;
+  height: 0.25rem;
+  width: 100%;
   bottom: -2px;
   right: 0;
   left: 0;
-  background-color: $medium;
+  background-color: $accent;
   transition: 0.5s;
   z-index: -5;
 }
 @mixin link-hover {
-  width: 100%;
+  height: 100%;
   border-radius: 1rem;
 }
 
@@ -100,9 +71,7 @@ header,
 footer {
   @include flex-center-between;
 }
-footer {
-  height: 40rem;
-}
+
 .header {
   @include flex-center-between;
   padding: 0 1.5rem;
@@ -123,7 +92,7 @@ h1 {
   align-items: center;
   height: 8rem;
   width: 100%;
-  background-color: $dark;
+  background-color: $complementary;
   border-bottom-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
   padding-bottom: 2rem;
@@ -185,7 +154,7 @@ h1 {
 
 /////////////// main-content section ///////////////
 body {
-  background-color: $light;
+  background-color: $dominant;
   ////img////
   // background-color: $white;
   // background-image: url("./waves.svg");
@@ -206,11 +175,12 @@ body {
 .title::after {
   position: absolute;
   content: "";
-  height: 0.2rem;
+  height: 0.5rem;
   width: 100%;
-  background-color: $dark;
+  background-color: $complementary;
   bottom: 2rem;
   left: 0;
+  border-radius: 1rem;
 }
 
 .container {
@@ -226,10 +196,10 @@ section {
 }
 a:link {
   text-decoration: none;
-  color: $black;
+  color: #000;
 }
 a:visited {
-  color: $black;
+  color: #000;
 }
 /////////////// hero section ///////////////
 .hero .container {
@@ -267,26 +237,30 @@ h2 {
   font-size: 2.8rem;
 }
 .underline {
-  position: relative;
+  text-decoration: underline;
+  text-decoration-color: $complementary;
+  text-decoration-thickness: 0.5rem;
+  text-underline-offset: 0.4rem;
+  padding: 0.4rem 0;
+  // position: relative;
 }
-.underline::after {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 100%;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  background-color: $medium;
-}
+// .underline::after {
+//   position: absolute;
+//   content: "";
+//   height: 5px;
+//   width: 100%;
+//   bottom: -1px;
+//   left: 0;
+//   right: 0;
+//   background-color: $complementary;
+//   border-radius: 1rem;
+// }
 
 /////////////// skills section ///////////////
 // .skills {
 
 // }
-.skills-container {
-  @include container-size;
-}
+
 .icons-grid {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -335,10 +309,7 @@ h2 {
 /////////////// work section ///////////////
 // .work {
 // }
-.work-container {
-  @include container-size;
-  padding: 4rem 0;
-}
+
 h4 {
   font-size: 2rem;
 }
@@ -356,7 +327,7 @@ h4 {
   overflow: hidden;
   margin: 1.5rem;
   @include border-radius;
-  background-color: $white;
+  background-color: $dominant;
   @include box-blur;
   backdrop-filter: blur(0);
 }
@@ -377,20 +348,24 @@ h4 {
   justify-content: space-between;
   height: auto;
 }
-
 .info-text {
-  padding: 0.5rem 0;
   font-size: 1.4rem;
+}
+.info-text,
+h4 {
+  padding: 0.5rem 0;
   position: relative;
 }
-.info-text::after {
+.info-text::after,
+h4::after {
   position: absolute;
   content: "";
   height: 0.1rem;
   width: 100%;
-  background-color: $dark;
+  background-color: $complementary;
   bottom: 0rem;
   left: 0;
+  border-radius: 1rem;
 }
 /// stack names ///
 .stack {
@@ -400,7 +375,7 @@ h4 {
 }
 .stack p {
   padding: 0.3rem 0.5rem;
-  color: $dark;
+  color: $complementary;
 }
 
 /// buttons ///
@@ -409,20 +384,6 @@ h4 {
   justify-content: space-evenly;
   margin-top: 1rem;
 }
-
-// .button {
-//   width: 5.5rem;
-//   text-align: center;
-//   border: 1px black solid;
-//   background-color: $white;
-//   padding: 0.7rem 0.9rem;
-//   @include swipe;
-// }
-// .button:hover,
-// .button:active {
-//   @include swipe-hover;
-// }
-
 .button {
   @include link-container;
 }
@@ -444,22 +405,17 @@ footer {
 }
 
 /////////////// contact section ///////////////
-.contact {
-  // background-color: $dark;
-  height: 40rem;
-  border-top-left-radius: 4rem;
-  border-top-right-radius: 4rem;
-  background: rgba(255, 255, 255, 0.18);
-  @include box-blur;
+.contact .container {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .contact-container {
-  @include container-size;
   .created-by {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    color: $black;
+    color: #000;
     width: 30rem;
     margin: 0 auto;
   }
@@ -478,7 +434,6 @@ footer {
   a {
     display: flex;
     align-items: center;
-    width: 100%;
     gap: 1rem;
     margin: 0.5rem;
     @include link-container;
@@ -588,11 +543,10 @@ footer {
 
   /////////////// contact section ///////////////
   .contact-container {
-    height: fit-content;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
-    padding-right: 6rem;
+
     .created-by {
       margin: 0;
     }

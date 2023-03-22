@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="hero-img-container">
           <img
             className="hero-img"
-            src={"./assets/undraw_programmer_re_owql (1).svg"}
+            src={"./assets/7464b2.svg"}
             alt="illustration of programmer"
           />
         </div>
