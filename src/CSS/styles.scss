@@ -17,7 +17,7 @@ body {
 
 $dominant: #fff;
 $complementary: #7464b2;
-$accent: #00c89e;
+$accent: #64b29b;
 
 /////////////// fonts ///////////////
 
@@ -440,9 +440,12 @@ footer {
   }
   a::after {
     @include link-after;
+    height: 100%;
+    width: 0.3rem;
   }
   a:hover::after {
     @include link-hover;
+    width: 100%;
   }
 }
 .link {
