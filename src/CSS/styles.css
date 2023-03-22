@@ -63,6 +63,12 @@ body {
   background-color: #fff;
 }
 
+.button:active,
+.contact-box a:active,
+.link:active {
+  transform: scale(0.9);
+}
+
 .main-container {
   margin-top: 15rem;
 }
