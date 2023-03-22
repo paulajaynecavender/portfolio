@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="header circle">
         <div className="nav_brand">
-          <h1>paula cavender</h1>
+          <h1>PAULA CAVENDER</h1>
         </div>
         <div className="navbar-container">{/* <NavBar /> */}</div>
       </div>
