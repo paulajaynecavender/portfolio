@@ -54,23 +54,51 @@ h1 {
 .circle {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 5rem;
-  height: 45rem;
-  width: 120rem;
-  border-radius: 55%;
+  align-items: center;
+  height: 8rem;
+  width: 100%;
+  background-color: #388b89;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  padding-bottom: 1rem;
+}
+
+body {
+  background-color: #ddeeeb;
+}
+
+.main-container {
+  margin-top: 15rem;
+}
+
+.title {
+  font-size: 3rem;
+  padding: 0 1rem 3rem 1rem;
+  position: relative;
+}
+
+.title::after {
   position: absolute;
-  top: -33rem;
-  background: linear-gradient(122deg, rgba(128, 255, 219, 0.7) 0%, rgba(86, 207, 225, 0.7) 29%, rgba(83, 144, 217, 0.7) 62%, rgba(116, 0, 184, 0.7) 100%);
+  content: "";
+  height: 0.2rem;
+  width: 100%;
+  background-color: #388b89;
+  bottom: 2rem;
+  left: 0;
+}
+
+.container {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  width: 95%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.4);
 }
 
-ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
+section {
+  margin: 10rem auto;
 }
 
 a:link {
@@ -82,83 +110,9 @@ a:visited {
   color: #000;
 }
 
-.nav {
+.hero .container {
   display: flex;
-  cursor: pointer;
-}
-
-.nav-items {
-  position: fixed;
-  top: 7.5rem;
-  left: 0;
-  height: calc(100vh - 7.5rem);
-  width: 100%;
-  padding-left: 3rem;
-  background-color: #6930c3;
   flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  transform: translateX(100%);
-  transition: 1.5s ease-in-out;
-}
-.nav-items li {
-  font-size: 3rem;
-  border-left: #64dfdf solid 0.5rem;
-  padding-left: 2rem;
-}
-.nav-items a {
-  color: none;
-  padding: 0.5rem;
-  box-shadow: inset 0 0 0 0 #64dfdf;
-  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
-}
-.nav-items a:hover,
-.nav-items a:active {
-  box-shadow: inset 200px 0 0 0 #64dfdf;
-  cursor: pointer;
-}
-
-.nav-active {
-  transform: translateX(0%);
-}
-
-.menu-toggler {
-  display: flex;
-}
-.menu-toggler img {
-  height: 3rem;
-}
-
-body {
-  background-color: #fff;
-  background-image: url("./waves.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center bottom;
-}
-
-.main-container {
-  margin-top: 15rem;
-}
-
-.title {
-  font-size: 3rem;
-  padding: 0 1rem 3rem 1rem;
-}
-
-.container {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-  width: 95%;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-section {
-  margin: 10rem auto;
 }
 
 .hero-name {
@@ -171,13 +125,30 @@ section {
   padding: 1rem 3rem;
 }
 
-.hero-text {
-  font-size: 2rem;
+.hero-headline-container {
+  margin: 0 auto;
+}
+
+.hero-headline {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img-container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-img {
+  width: 20rem;
+}
+
+h2 {
+  font-size: 2.8rem;
 }
 
 .underline {
   position: relative;
-  font-size: 3rem;
 }
 
 .underline::after {
@@ -188,7 +159,7 @@ section {
   bottom: -1px;
   left: 0;
   right: 0;
-  background-color: #6930c3;
+  background-color: #6166bb;
 }
 
 .skills-container {
@@ -306,7 +277,7 @@ h4 {
   content: "";
   height: 0.1rem;
   width: 100%;
-  background-color: #000;
+  background-color: #388b89;
   bottom: 0rem;
   left: 0;
 }
@@ -318,8 +289,8 @@ h4 {
 }
 
 .stack p {
-  background-color: #80ffdb;
   padding: 0.3rem 0.5rem;
+  color: #388b89;
 }
 
 .btn-container {
@@ -329,19 +300,26 @@ h4 {
 }
 
 .button {
-  width: 5.5rem;
-  text-align: center;
-  border: 1px black solid;
-  background-color: #fff;
-  padding: 0.7rem 0.9rem;
-  box-shadow: inset 0 0 0 0 #80ffdb;
-  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+  position: relative;
+  padding: 0.5rem 0.5rem;
 }
 
-.button:hover,
-.button:active {
-  box-shadow: inset 200px 0 0 0 #80ffdb;
-  cursor: pointer;
+.button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.2rem;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  background-color: #6166bb;
+  transition: 0.5s;
+  z-index: -5;
+}
+
+.button:hover::after,
+.button:active::after {
+  width: 100%;
 }
 
 section,
@@ -389,7 +367,6 @@ footer {
   padding: 2rem;
   width: -moz-fit-content;
   width: fit-content;
-  /* From https://css.glass */
 }
 .contact-box img {
   width: 5rem;
@@ -399,61 +376,68 @@ footer {
   align-items: center;
   width: 100%;
   gap: 1rem;
+  margin: 0.5rem;
+  position: relative;
+  padding: 0.5rem 0.5rem;
 }
-.contact-box p {
-  box-shadow: inset 0 0 0 0 #80ffdb;
-  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
-  padding: 1rem;
+.contact-box a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.2rem;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  background-color: #6166bb;
+  transition: 0.5s;
+  z-index: -5;
 }
-.contact-box a:hover p {
-  box-shadow: inset 200px 0 0 0 #80ffdb;
-  cursor: pointer;
+.contact-box a:hover::after {
+  width: 100%;
 }
 
 .link {
-  box-shadow: inset 0 0 0 0 #80ffdb;
-  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
   padding: 0.5rem;
   width: 22rem;
-  text-decoration: underline;
+  position: relative;
+  padding: 0.5rem 0.5rem;
 }
 
-.link:hover {
-  box-shadow: inset 200px 0 0 0 #80ffdb;
-  cursor: pointer;
+.link::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.2rem;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  background-color: #6166bb;
+  transition: 0.5s;
+  z-index: -5;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .circle {
-    width: 180rem;
-  }
   h1 {
     font-size: 5.5rem;
   }
-  .nav-items {
-    display: flex;
-    cursor: pointer;
-    position: static;
-    height: auto;
-    width: auto;
+  .hero .container {
     flex-direction: row;
-    transform: translateX(0%);
-    transition: none;
-    gap: 2rem;
   }
-  .nav-items li {
-    font-size: 2.5rem;
-    border: none;
+  .hero-headline {
+    flex-direction: row;
   }
-  .menu-toggler {
-    display: none;
+  .hero-img {
+    width: 25rem;
   }
   .skills .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    padding-right: 6rem;
   }
   .icons-grid {
     gap: 3rem;
@@ -492,9 +476,6 @@ footer {
   }
 }
 @media screen and (min-width: 1024px) {
-  .circle {
-    width: 250rem;
-  }
   .hero-name {
     font-size: 8rem;
     padding: 2rem;

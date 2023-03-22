@@ -23,7 +23,7 @@ const Card = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    live
+                    live version
                   </a>
                   <a
                     className="button"
@@ -31,7 +31,7 @@ const Card = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    code
+                    view code
                   </a>
                 </div>
               </div>

@@ -14,19 +14,23 @@ body {
 }
 
 /////////////// colours ///////////////
-$black: #000;
-$white: #fff;
-$light: #64dfdf;
-$medium: #6930c3;
-$dark: #7400b8;
-$neon: #80ffdb;
-
 // $black: #000;
 // $white: #fff;
+// $light: #64dfdf;
+// $medium: #6930c3;
+// $dark: #7400b8;
+// $neon: #80ffdb;
+
+$black: #000;
+$white: #fff;
 // $light: #f6f0ff;
 // $medium: #8380b6;
 // $dark: #563f7b;
 // $neon: #45f0df;
+
+$light: #ddeeeb;
+$medium: #6166bb;
+$dark: #388b89;
 
 /////////////// fonts ///////////////
 
@@ -43,14 +47,14 @@ h4 {
   justify-content: space-between;
   align-items: center;
 }
-@mixin swipe($value) {
-  box-shadow: inset 0 0 0 0 ($value);
-  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
-}
-@mixin swipe-hover($value) {
-  box-shadow: inset 200px 0 0 0 ($value);
-  cursor: pointer;
-}
+// @mixin swipe {
+//   box-shadow: inset 0 0 0 0 $medium;
+//   transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+// }
+// @mixin swipe-hover {
+//   box-shadow: inset 200px 0 0 0 $medium;
+//   cursor: pointer;
+// }
 @mixin container-size {
   width: 100%;
   height: 100%;
@@ -69,6 +73,27 @@ h4 {
 @mixin border-radius {
   border-radius: 5rem;
 }
+
+@mixin link-container {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+}
+@mixin link-after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.2rem;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  background-color: $medium;
+  transition: 0.5s;
+  z-index: -5;
+}
+@mixin link-hover {
+  width: 100%;
+}
+
 /////////////// header & footer ///////////////
 header,
 footer {
@@ -94,91 +119,79 @@ h1 {
 .circle {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 5rem;
-  height: 45rem;
-  width: 120rem;
-  border-radius: 55%;
-  position: absolute;
-  top: -33rem;
-  background: linear-gradient(
-    122deg,
-    rgba(128, 255, 219, 0.7) 0%,
-    rgba(86, 207, 225, 0.7) 29%,
-    rgba(83, 144, 217, 0.7) 62%,
-    rgba(116, 0, 184, 0.7) 100%
-  );
-  @include box-blur;
+  align-items: center;
+  height: 8rem;
+  width: 100%;
+  background-color: $dark;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  padding-bottom: 1rem;
 }
 
 /////////////// nav ///////////////
-ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-a:link {
-  text-decoration: none;
-  color: $black;
-}
-a:visited {
-  color: $black;
-}
-.nav {
-  display: flex;
-  cursor: pointer;
-}
+// ul {
+//   display: flex;
+//   list-style: none;
+//   gap: 1rem;
+// }
 
-//// mobile nav ////
+// .nav {
+//   display: flex;
+//   cursor: pointer;
+// }
 
-.nav-items {
-  position: fixed;
-  top: 7.5rem;
-  left: 0;
-  height: calc(100vh - 7.5rem);
-  width: 100%;
-  padding-left: 3rem;
-  background-color: $medium;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  transform: translateX(100%);
-  transition: 1.5s ease-in-out;
+// //// mobile nav ////
 
-  li {
-    font-size: 3rem;
-    border-left: $light solid 0.5rem;
-    padding-left: 2rem;
-  }
-  a {
-    color: none;
-    padding: 0.5rem;
-    @include swipe($light);
-  }
-  a:hover,
-  a:active {
-    @include swipe-hover($light);
-  }
-}
-.nav-active {
-  transform: translateX(0%);
-  // max-height: max-content;
-}
-.menu-toggler {
-  display: flex;
-  img {
-    height: 3rem;
-  }
-}
+// .nav-items {
+//   position: fixed;
+//   top: 7.5rem;
+//   left: 0;
+//   height: calc(100vh - 7.5rem);
+//   width: 100%;
+//   padding-left: 3rem;
+//   background-color: $medium;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 3rem;
+//   transform: translateX(100%);
+//   transition: 1.5s ease-in-out;
+
+//   li {
+//     font-size: 3rem;
+//     border-left: $light solid 0.5rem;
+//     padding-left: 2rem;
+//   }
+//   a {
+//     color: none;
+//     padding: 0.5rem;
+//     @include swipe($light);
+//   }
+//   a:hover,
+//   a:active {
+//     @include swipe-hover($light);
+//   }
+// }
+// .nav-active {
+//   transform: translateX(0%);
+//   // max-height: max-content;
+// }
+// .menu-toggler {
+//   display: flex;
+//   img {
+//     height: 3rem;
+//   }
+// }
 
 /////////////// main-content section ///////////////
 body {
-  background-color: $white;
-  background-image: url("./waves.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center bottom;
+  background-color: $light;
+  ////img////
+  // background-color: $white;
+  // background-image: url("./waves.svg");
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-position: center bottom;
 }
 
 .main-container {
@@ -187,6 +200,16 @@ body {
 .title {
   font-size: 3rem;
   padding: 0 1rem 3rem 1rem;
+  position: relative;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  height: 0.2rem;
+  width: 100%;
+  background-color: $dark;
+  bottom: 2rem;
+  left: 0;
 }
 
 .container {
@@ -195,16 +218,23 @@ body {
   width: 95%;
   // margin: 2rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.4);
 }
 section {
   margin: 10rem auto;
 }
-
+a:link {
+  text-decoration: none;
+  color: $black;
+}
+a:visited {
+  color: $black;
+}
 /////////////// hero section ///////////////
-// .hero {
-
-// }
+.hero .container {
+  display: flex;
+  flex-direction: column;
+}
 .hero-name {
   font-size: 7rem;
   padding: 1rem 2rem;
@@ -215,13 +245,27 @@ section {
   padding: 1rem 3rem;
   // text-shadow: 0px 0px 1rem $medium;
 }
-.hero-text {
-  font-size: 2rem;
-  // padding: 1.5rem 3rem;
+
+.hero-headline-container {
+  margin: 0 auto;
+}
+.hero-headline {
+  display: flex;
+  flex-direction: column;
+}
+.hero-img-container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+.hero-img {
+  width: 20rem;
+}
+// .hero-description{}
+h2 {
+  font-size: 2.8rem;
 }
 .underline {
   position: relative;
-  font-size: 3rem;
 }
 .underline::after {
   position: absolute;
@@ -342,7 +386,7 @@ h4 {
   content: "";
   height: 0.1rem;
   width: 100%;
-  background-color: #000;
+  background-color: $dark;
   bottom: 0rem;
   left: 0;
 }
@@ -353,8 +397,8 @@ h4 {
   padding: 0.5rem 0;
 }
 .stack p {
-  background-color: $neon;
   padding: 0.3rem 0.5rem;
+  color: $dark;
 }
 
 /// buttons ///
@@ -364,18 +408,30 @@ h4 {
   margin-top: 1rem;
 }
 
+// .button {
+//   width: 5.5rem;
+//   text-align: center;
+//   border: 1px black solid;
+//   background-color: $white;
+//   padding: 0.7rem 0.9rem;
+//   @include swipe;
+// }
+// .button:hover,
+// .button:active {
+//   @include swipe-hover;
+// }
+
 .button {
-  width: 5.5rem;
-  text-align: center;
-  border: 1px black solid;
-  background-color: $white;
-  padding: 0.7rem 0.9rem;
-  @include swipe($neon);
+  @include link-container;
 }
-.button:hover,
-.button:active {
-  @include swipe-hover($neon);
+.button::after {
+  @include link-after;
 }
+.button:hover::after,
+.button:active::after {
+  @include link-hover;
+}
+
 section,
 header,
 footer {
@@ -413,10 +469,6 @@ footer {
   margin: 0 auto;
   padding: 2rem;
   width: fit-content;
-  // outline: 4px solid $black;
-  // outline-offset: -7px;
-  // @include box-shadow;
-  /* From https://css.glass */
 
   img {
     width: 5rem;
@@ -426,67 +478,77 @@ footer {
     align-items: center;
     width: 100%;
     gap: 1rem;
+    margin: 0.5rem;
+    @include link-container;
   }
-  p {
-    @include swipe($neon);
-    padding: 1rem;
+  a::after {
+    @include link-after;
   }
-  a:hover p {
-    @include swipe-hover($neon);
+  a:hover::after {
+    @include link-hover;
   }
 }
 .link {
-  @include swipe($neon);
   padding: 0.5rem;
   width: 22rem;
-  text-decoration: underline;
+  @include link-container;
 }
-.link:hover {
-  @include swipe-hover($neon);
+.link::after {
+  @include link-after;
 }
+.link:hover::after {
+  @include link-hover;
+}
+
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
-  .circle {
-    width: 180rem;
-  }
+
   h1 {
     font-size: 5.5rem;
   }
   /////////////// nav ///////////////
 
-  .nav-items {
-    display: flex;
-    cursor: pointer;
-    position: static;
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    transform: translateX(0%);
-    transition: none;
-    gap: 2rem;
-    li {
-      font-size: 2.5rem;
-      border: none;
-    }
-  }
-  .menu-toggler {
-    display: none;
-  }
+  // .nav-items {
+  //   display: flex;
+  //   cursor: pointer;
+  //   position: static;
+  //   height: auto;
+  //   width: auto;
+  //   flex-direction: row;
+  //   transform: translateX(0%);
+  //   transition: none;
+  //   gap: 2rem;
+  //   li {
+  //     font-size: 2.5rem;
+  //     border: none;
+  //   }
+  // }
+  // .menu-toggler {
+  //   display: none;
+  // }
 
   /////////////// main-content section ///////////////
   // .container {
 
   // }
   /////////////// hero section ///////////////
+  .hero .container {
+    flex-direction: row;
+  }
+  .hero-headline {
+    flex-direction: row;
+  }
 
+  .hero-img {
+    width: 25rem;
+  }
   /////////////// skills section ///////////////
   .skills .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    padding-right: 6rem;
   }
   .icons-grid {
     gap: 3rem;
@@ -531,9 +593,7 @@ footer {
 /// ********* LAPTOP MONITOR ********* ///
 @media screen and (min-width: 1024px) {
   /////////////// header & footer ///////////////
-  .circle {
-    width: 250rem;
-  }
+
   /////////////// nav ///////////////
 
   /////////////// main-content section ///////////////

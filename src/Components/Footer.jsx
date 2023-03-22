@@ -32,7 +32,11 @@ const Footer = () => {
         </div>
         <div className="created-by">
           <p>Designed and created by me</p>
-          <a href="https://github.com/paulajaynecavender/portfolio">
+          <a
+            href="https://github.com/paulajaynecavender/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p className="link">check out the code here</p>
           </a>
         </div>
