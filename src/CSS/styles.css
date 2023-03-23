@@ -102,14 +102,20 @@ a:visited {
 .hero .container {
   display: flex;
   flex-direction: column;
+  padding: 0 4rem;
 }
 
 .hero-name {
   font-size: 1.7rem;
 }
 
-.hero-headline-container p {
-  font-size: 1.7rem;
+.hero-text {
+  line-height: 2.5rem;
+  font-size: 2rem;
+}
+
+.hero-description {
+  margin-bottom: 2rem;
 }
 
 .hero-img-container {
@@ -124,6 +130,8 @@ a:visited {
 h2 {
   font-size: 5rem;
   color: #7464b2;
+  line-height: 4.5rem;
+  margin: 1rem 0;
 }
 
 .text-highlight {
@@ -416,6 +424,10 @@ footer {
     display: flex;
     flex-direction: column;
     margin: auto 0;
+  }
+  .hero-description {
+    margin-bottom: 0rem;
+    margin-right: 10rem;
   }
   .icons-grid div {
     padding: 1.2rem;
