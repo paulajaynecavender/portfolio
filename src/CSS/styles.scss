@@ -547,9 +547,12 @@ h4::after {
 
 @media screen and (max-height: 400px) {
   .hero {
-    padding-top: 21rem;
+    padding-top: 20rem;
   }
   .arrow {
     display: none;
+  }
+  header {
+    position: relative;
   }
 }
