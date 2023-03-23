@@ -59,7 +59,7 @@ h4 {
   left: 0;
   background-color: $accent;
   transition: 0.5s;
-  z-index: -5;
+  // z-index: -5;
   border-radius: 1rem;
 }
 @mixin link-hover {
@@ -168,35 +168,36 @@ body {
   transform: scale(0.9);
 }
 
-.main-container {
-  margin-top: 15rem;
-}
+// .main-container {
+//   margin-top: 15rem;
+// }
 .title {
   font-size: 3rem;
   padding: 0 1rem 3rem 1rem;
   position: relative;
 }
-.title::after {
-  position: absolute;
-  content: "";
-  height: 0.5rem;
-  width: 100%;
-  background-color: $complementary;
-  bottom: 2.9rem;
-  left: 0;
-  border-radius: 1rem;
-}
+// .title::after {
+//   position: absolute;
+//   content: "";
+//   height: 0.5rem;
+//   width: 100%;
+//   background-color: $complementary;
+//   bottom: 2.9rem;
+//   left: 0;
+//   border-radius: 1rem;
+// }
 
 .container {
-  @include box-blur;
-  @include border-radius;
+  // @include box-blur;
+  // @include border-radius;
   width: 95%;
   // margin: 2rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.4);
+  // background: rgba(255, 255, 255, 0.4);
 }
 section {
-  margin: 10rem auto;
+  margin: 0 auto;
+  max-width: 140rem;
 }
 a:link {
   text-decoration: none;
@@ -206,81 +207,99 @@ a:visited {
   color: #000;
 }
 /////////////// hero section ///////////////
+
+.hero {
+  // height: calc(100vh - 10rem);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .hero .container {
   display: flex;
   flex-direction: column;
 }
 .hero-name {
-  font-size: 7rem;
-  padding: 1rem 2rem;
-  // text-shadow: 0px 0px 1rem $medium;
+  font-size: 1.7rem;
 }
-.hero-title {
-  font-size: 5rem;
-  padding: 1rem 3rem;
-  // text-shadow: 0px 0px 1rem $medium;
-}
+// .hero-description {
+// }
 
 .hero-headline-container {
-  display: flex;
-  justify-content: center;
-  margin: auto 0;
+  p {
+    font-size: 1.7rem;
+  }
 }
 .hero-img-container {
-  padding: 2rem;
   margin: 0 auto;
 }
 .hero-img {
-  width: 15rem;
+  margin: auto 0;
+  width: 20rem;
 }
-.hero-description {
-  display: flex;
-  align-items: center;
-}
+
 h2 {
-  font-size: 2.8rem;
+  font-size: 5rem;
+  color: $complementary;
 }
-.underline {
-  text-decoration: underline;
-  text-decoration-color: $complementary;
-  text-decoration-thickness: 0.5rem;
-  text-underline-offset: 0.4rem;
-  padding: 0.4rem 0;
-  // position: relative;
+.text-highlight {
+  color: $complementary;
+  font-size: 2.5rem;
 }
-// .underline::after {
-//   position: absolute;
-//   content: "";
-//   height: 5px;
-//   width: 100%;
-//   bottom: -1px;
-//   left: 0;
-//   right: 0;
-//   background-color: $complementary;
-//   border-radius: 1rem;
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto 4rem auto;
+  width: 10rem;
+  animation: bounce 1s ease;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0px, 6px);
+  }
+  50% {
+    transform: translate(0px, 12px);
+  }
+  100% {
+    transform: translate(0px, 6px);
+  }
+}
+
+// div:hover {
+//   animation: shake 0.4s;
+//   animation-iteration-count: 1;
 // }
+
+// @keyframes shake {
+//   0% {
+//     transform: translate(1px, 1px);
+//   }
 
 /////////////// skills section ///////////////
-// .skills {
-
-// }
 
 .icons-grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
   max-width: 50rem;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   div {
-    margin: 0.7rem auto;
-    padding: 1.2rem;
-    width: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 1.2rem;
+    width: 8rem;
+
     img {
       width: 4rem;
+      margin-bottom: 0.5rem;
     }
   }
+
   div:hover {
     animation: shake 0.4s;
     animation-iteration-count: 1;
@@ -397,6 +416,7 @@ h4::after {
 .button:hover::after,
 .button:active::after {
   @include link-hover;
+  z-index: -5;
 }
 
 section,
@@ -409,6 +429,10 @@ footer {
 }
 
 /////////////// contact section ///////////////
+.contact {
+  background-color: $complementary;
+  // opacity: 50%;
+}
 .contact .container {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -419,10 +443,14 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    color: #000;
+    color: #fff;
     width: 30rem;
     margin: 0 auto;
   }
+}
+.white-text {
+  color: #fff;
+  z-index: 5;
 }
 .contact-box {
   display: flex;
@@ -434,6 +462,7 @@ footer {
 
   img {
     width: 5rem;
+    z-index: 5;
   }
   a {
     display: flex;
@@ -463,6 +492,7 @@ footer {
 }
 .link:hover::after {
   @include link-hover;
+  z-index: -5;
 }
 
 /// ********* TABLET SCREEN ********* ///
@@ -494,38 +524,25 @@ footer {
   // }
 
   /////////////// main-content section ///////////////
-  // .container {
-
-  // }
+  .container {
+    width: 90%;
+  }
   /////////////// hero section ///////////////
   .hero .container {
     flex-direction: row;
   }
   .hero-headline-container {
-    order: 1;
-    // flex-basis: 300px;
-    p {
-      width: max-content;
-    }
-  }
-  .hero-description {
-    order: 2;
-    padding-left: 2rem;
-    // flex-basis: 60%;
-  }
-  .hero-img-container {
-    order: 3;
-    padding: 2rem 0 2rem 2rem;
-    // flex-basis: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
   }
 
   /////////////// skills section ///////////////
   .icons-grid {
-    gap: 3rem;
     div {
-      margin: 0 auto;
+      // margin: 0 auto;
       padding: 1.2rem;
-      width: 9rem;
+      width: 10rem;
       img {
         width: 5rem;
       }
@@ -566,39 +583,38 @@ footer {
   /////////////// nav ///////////////
 
   /////////////// main-content section ///////////////
-
+  .container {
+    width: 100%;
+  }
   /////////////// hero section ///////////////
-  .hero-name {
-    font-size: 8rem;
-    padding: 2rem;
-  }
-  .hero-title {
-    font-size: 6rem;
-    padding: 3rem;
-  }
-  .hero-text {
-    font-size: 2rem;
-    padding: 3rem;
-    max-width: 100rem;
-    margin: 0 auto;
-  }
-  // .hero-img {
-  //   width: 25rem;
+  // .hero-name {
+  //   font-size: 8rem;
+  //   padding: 2rem;
   // }
+
+  .hero-img {
+    width: 30rem;
+  }
   /////////////// skills section ///////////////
 
   /////////////// work section ///////////////
+
+  .icons-grid {
+    max-width: 70rem;
+    div {
+      width: 12rem;
+      img {
+        width: 6rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
 /// ********* LARGE MONITOR ********* ///
 @media screen and (min-width: 1440px) {
   .cards-container {
     width: 137rem;
-  }
-  h2 {
-    font-size: 3.5rem;
-  }
-  //// max-width set ////
-  .container {
-    width: 140rem;
   }
 }

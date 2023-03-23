@@ -3,11 +3,18 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="container">
         <div className="hero-headline-container">
-          <p>
-            Hi! My name is <h2 className="underline">Paula Cavender</h2> and I
-            am a <h2 className="underline">front-end developer</h2>
+          <p className="hero-name">
+            Hi! My name is <h2>Paula Cavender</h2>
+          </p>
+          <p className="hero-description">
+            I am a<span className="text-highlight"> front-end developer </span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
+            officiis nisi error vitae necessitatibus pariatur natus animi
+            excepturi magnam voluptas ut enim aut expedita recusandae voluptates
+            laudantium quia omnis at!
           </p>
         </div>
+
         <div className="hero-img-container">
           <img
             className="hero-img"
@@ -15,13 +22,13 @@ const Hero = () => {
             alt="illustration of programmer"
           />
         </div>
-        <p className="hero-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-          officiis nisi error vitae necessitatibus pariatur natus animi
-          excepturi magnam voluptas ut enim aut expedita recusandae voluptates
-          laudantium quia omnis at!
-        </p>
       </div>
+      <img
+        className="arrow"
+        src={"./assets/icons/arrow.svg"}
+        alt="down arrow"
+        height="25px"
+      ></img>
     </section>
   );
 };

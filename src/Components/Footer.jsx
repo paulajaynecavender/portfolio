@@ -12,7 +12,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/email3.svg"} alt="email"></img>
-              <p>paula.cavender@gmail.com</p>
+              <p className="white-text">paula.cavender@gmail.com</p>
             </a>
             <a
               href="https://github.com/paulajaynecavender"
@@ -20,7 +20,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/github3.svg"} alt="github"></img>
-              <p>paulajaynecavender</p>
+              <p className="white-text">paulajaynecavender</p>
             </a>
             <a
               href="https://www.linkedin.com/in/paulacavender/"
@@ -28,17 +28,17 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/linkedin3.svg"} alt="linkedin"></img>
-              <p>paulacavender</p>
+              <p className="white-text">paulacavender</p>
             </a>
           </div>
-          <div className="created-by">
-            <p>Designed and created by me</p>
+          <div className="created-by ">
+            <p className="white-text">Designed and created by me</p>
             <a
               href="https://github.com/paulajaynecavender/portfolio"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="link">check out the code here</p>
+              <p className="link white-text">check out the code here</p>
             </a>
           </div>
         </div>
