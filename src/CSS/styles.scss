@@ -7,7 +7,6 @@ html {
   font-size: 62.5%;
   font-family: "Kulim Park", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 7.5rem;
 }
 body {
   font-size: 1.6rem;
@@ -35,67 +34,61 @@ h4 {
   align-items: center;
 }
 
-@mixin box-blur {
+@mixin box-shadow {
   // background: rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(1rem);
 }
 @mixin border-radius {
   border-radius: 3rem;
 }
 
-@mixin link-container {
-  position: relative;
-  padding: 0.5rem 0.5rem;
-}
-@mixin link-after {
-  content: "";
-  position: absolute;
-  height: 0.25rem;
-  width: 100%;
-  bottom: -2px;
-  right: 0;
-  left: 0;
-  background-color: $accent;
-  transition: 0.5s;
-  // z-index: -5;
-  border-radius: 1rem;
-}
-@mixin link-hover {
-  height: 100%;
-}
+// @mixin link-after {
+//   content: "";
+//   position: absolute;
+//   height: 0.25rem;
+//   width: 100%;
+//   bottom: -2px;
+//   right: 0;
+//   left: 0;
+//   background-color: $accent;
+//   transition: 0.5s;
+//   // z-index: -5;
+//   border-radius: 1rem;
+// }
+// @mixin link-hover {
+//   height: 100%;
+// }
 
 /////////////// header & footer ///////////////
-header,
-footer {
-  @include flex-center-between;
-}
+// header,
+// footer {
+//   @include flex-center-between;
+// }
 
-.header {
-  @include flex-center-between;
-  padding: 0 1.5rem;
-}
-header {
-  position: fixed;
-  top: 0;
-  min-width: 100%;
-  z-index: 100;
-}
+// .header {
+//   @include flex-center-between;
+//   padding: 0 1.5rem;
+// }
+// header {
+//   position: fixed;
+//   top: 0;
+//   min-width: 100%;
+//   z-index: 100;
+// }
 h1 {
   font-size: 4.2rem;
 }
 
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 8rem;
-  width: 100%;
-  background-color: $complementary;
-  border-bottom-left-radius: 4rem;
-  border-bottom-right-radius: 4rem;
-}
+// .circle {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 8rem;
+//   width: 100%;
+//   background-color: $complementary;
+//   border-bottom-left-radius: 4rem;
+//   border-bottom-right-radius: 4rem;
+// }
 
 /////////////// nav ///////////////
 // ul {
@@ -154,13 +147,6 @@ h1 {
 /////////////// main-content section ///////////////
 body {
   background-color: $dominant;
-  ////img////
-  // background-color: $white;
-  // background-image: url("./waves.svg");
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // background-position: center bottom;
 }
 .button:active,
 .contact-box a:active,
@@ -171,33 +157,51 @@ body {
 // .main-container {
 //   margin-top: 15rem;
 // }
-.title {
+
+// h3 titles
+.title,
+.hero-headline-container {
   font-size: 3rem;
   padding: 0 1rem 3rem 1rem;
   position: relative;
+  width: fit-content;
+  // color: $complementary;
 }
-// .title::after {
-//   position: absolute;
-//   content: "";
-//   height: 0.5rem;
-//   width: 100%;
-//   background-color: $complementary;
-//   bottom: 2.9rem;
-//   left: 0;
-//   border-radius: 1rem;
-// }
+.title::before,
+.hero-headline-container::before {
+  position: absolute;
+  content: "";
+  height: 0.5rem;
+  z-index: -5;
+  width: 70%;
+  background-color: $complementary;
+  top: -2rem;
+  left: 0.5rem;
+  border-radius: 1rem;
+}
 
 .container {
-  // @include box-blur;
-  // @include border-radius;
   width: 95%;
-  // margin: 2rem;
   padding: 2rem;
-  // background: rgba(255, 255, 255, 0.4);
 }
-section {
+section,
+.contact .container {
   margin: 0 auto;
   max-width: 140rem;
+}
+
+section,
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.skills,
+.work {
+  margin: 15rem auto;
 }
 a:link {
   text-decoration: none;
@@ -209,10 +213,7 @@ a:visited {
 /////////////// hero section ///////////////
 
 .hero {
-  // height: calc(100vh - 10rem);
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 .hero .container {
   display: flex;
@@ -222,21 +223,19 @@ a:visited {
 .hero-name {
   font-size: 1.7rem;
 }
+.hero-description {
+  margin-bottom: 2rem;
+}
 .hero-text {
   line-height: 2.5rem;
   font-size: 2rem;
 }
-.hero-description {
-  margin-bottom: 2rem;
-}
-
 .hero-img-container {
   margin: 0 auto;
 }
 .hero-img {
   width: 17rem;
 }
-
 h2 {
   font-size: 5rem;
   color: $complementary;
@@ -269,16 +268,6 @@ h2 {
   }
 }
 
-// div:hover {
-//   animation: shake 0.4s;
-//   animation-iteration-count: 1;
-// }
-
-// @keyframes shake {
-//   0% {
-//     transform: translate(1px, 1px);
-//   }
-
 /////////////// skills section ///////////////
 
 .icons-grid {
@@ -292,9 +281,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+    margin: 0.5rem;
     padding: 1.2rem;
     width: 8rem;
+    @include box-shadow;
+    @include border-radius;
 
     img {
       width: 4rem;
@@ -332,8 +323,6 @@ h2 {
 }
 
 /////////////// work section ///////////////
-// .work {
-// }
 
 h4 {
   font-size: 2rem;
@@ -353,19 +342,17 @@ h4 {
   margin: 1.5rem;
   @include border-radius;
   background-color: $dominant;
-  @include box-blur;
-  backdrop-filter: blur(0);
+  @include box-shadow;
 }
 .inner-container {
-  width: 30rem;
-  height: 49rem;
-  overflow: hidden;
+  // width: 30rem;
+  // height: 49rem;
+  // overflow: hidden;
+  // position: relative;
   img {
-    width: 30rem;
+    width: 100%;
   }
-  position: relative;
 }
-
 .card-description {
   padding: 0rem 1rem 2rem 1rem;
   display: flex;
@@ -376,6 +363,8 @@ h4 {
 .info-text {
   font-size: 1.4rem;
 }
+
+/// line after ///
 .info-text,
 h4 {
   padding: 0.5rem 0;
@@ -410,100 +399,70 @@ h4::after {
   margin-top: 1rem;
 }
 .button {
-  @include link-container;
-}
-.button::after {
-  @include link-after;
-}
-.button:hover::after,
-.button:active::after {
-  @include link-hover;
-  z-index: -5;
+  border: 0.2rem solid $accent;
+  padding: 0.8rem;
+  border-radius: 1rem;
 }
 
-section,
-header,
-footer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
+.button:hover,
+.button:active {
+  background-color: $accent;
+  color: #fff;
 }
 
 /////////////// contact section ///////////////
 .contact {
   background-color: $complementary;
-  // opacity: 50%;
-}
-.contact .container {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  .container {
+    padding: 3rem 0;
+  }
 }
 .contact-container {
   .created-by {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    color: #fff;
-    width: 30rem;
+    padding: 2rem;
     margin: 0 auto;
+  }
+}
+.contact-box {
+  display: flex;
+  justify-content: center;
+  // margin: 0 auto;
+
+  img {
+    width: 5rem;
+  }
+  img:hover {
+    border-radius: 2.5rem;
+    @include box-shadow;
+  }
+  a {
+    display: flex;
+    margin: 0.5rem;
   }
 }
 .white-text {
   color: #fff;
-  z-index: 5;
+  text-align: center;
 }
-.contact-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-  width: fit-content;
 
-  img {
-    width: 5rem;
-    z-index: 5;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0.5rem;
-    @include link-container;
-  }
-  a::after {
-    @include link-after;
-    height: 100%;
-    width: 0.3rem;
-    bottom: 0;
-    left: -0.5rem;
-  }
-  a:hover::after {
-    @include link-hover;
-    width: 105%;
-  }
-}
 .link {
-  padding: 0.5rem;
-  @include link-container;
+  text-decoration: underline;
 }
-.link::after {
-  @include link-after;
-}
-.link:hover::after {
-  @include link-hover;
-  z-index: -5;
+.link:hover {
+  background-color: $accent;
+  text-decoration: none;
 }
 
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
 
-  h1 {
-    font-size: 5.5rem;
-  }
+  // h1 {
+  //   font-size: 5.5rem;
+  // }
+
   /////////////// nav ///////////////
 
   // .nav-items {
@@ -555,6 +514,7 @@ footer {
       // margin: 0 auto;
       padding: 1.2rem;
       width: 10rem;
+
       img {
         width: 5rem;
       }
@@ -615,6 +575,7 @@ footer {
     max-width: 70rem;
     div {
       width: 12rem;
+      margin: 1rem;
       img {
         width: 6rem;
       }

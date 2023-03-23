@@ -7,7 +7,7 @@ import "./CSS/styles.css";
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <div className="main-container">
         <Hero />
         <Skills />

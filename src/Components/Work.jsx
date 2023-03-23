@@ -5,7 +5,7 @@ const Work = () => {
   return (
     <section className="work" id="work">
       <div className="container">
-        <h3 className="title work-title">My Projects</h3>
+        <h3 className="title">My Projects</h3>
 
         <div className="cards-container">
           <Card />

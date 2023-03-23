@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="contact">
       <div className="container">
-        <h3 className="title contact-title">Contact Me</h3>
+        {/* <h3 className="title contact-title">Contact Me</h3> */}
 
         <div className="contact-container ">
           <div className="contact-box">
@@ -12,7 +12,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/email3.svg"} alt="email"></img>
-              <p className="white-text">paula.cavender@gmail.com</p>
             </a>
             <a
               href="https://github.com/paulajaynecavender"
@@ -20,7 +19,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/github3.svg"} alt="github"></img>
-              <p className="white-text">paulajaynecavender</p>
             </a>
             <a
               href="https://www.linkedin.com/in/paulacavender/"
@@ -28,7 +26,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={"./assets/icons/linkedin3.svg"} alt="linkedin"></img>
-              <p className="white-text">paulacavender</p>
             </a>
           </div>
           <div className="created-by ">
@@ -38,10 +35,13 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="link white-text">check out the code here</p>
+              <p className="white-text">
+                check out the code <span className="link">here</span>
+              </p>
             </a>
           </div>
         </div>
+        <p className="white-text">© Paula Cavender</p>
       </div>
     </footer>
   );
