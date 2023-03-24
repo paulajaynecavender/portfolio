@@ -110,10 +110,6 @@ a:link {
   color: #000;
 }
 
-a:visited {
-  color: #000;
-}
-
 .hero {
   height: 100vh;
 }
@@ -300,13 +296,17 @@ h4::after {
   border: 0.2rem solid #64b29b;
   padding: 0.3rem 0.8rem 0.8rem 0.8rem;
   border-radius: 1rem;
+  color: #fff;
+  background-color: #64b29b;
 }
 
 .button:hover,
 .button:active {
-  background-color: #64b29b;
-  color: #fff;
   transition: 0.3s ease-in-out;
+  background-color: #fff;
+  border: 0.2rem solid #64b29b;
+  color: #000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contact {
@@ -351,6 +351,7 @@ h4::after {
 .link:hover {
   background-color: #64b29b;
   text-decoration: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 768px) {
@@ -429,7 +430,7 @@ h4::after {
 }
 @media screen and (max-height: 400px) {
   .hero {
-    padding-top: 20rem;
+    padding-top: 15rem;
   }
   .arrow {
     display: none;

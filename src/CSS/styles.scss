@@ -177,9 +177,9 @@ a:link {
   text-decoration: none;
   color: #000;
 }
-a:visited {
-  color: #000;
-}
+// a:visited {
+//   color: #000;
+// }
 /////////////// hero section ///////////////
 
 .hero {
@@ -368,13 +368,17 @@ h4::after {
   border: 0.2rem solid $accent;
   padding: 0.3rem 0.8rem 0.8rem 0.8rem;
   border-radius: 1rem;
+  color: #fff;
+  background-color: $accent;
 }
 
 .button:hover,
 .button:active {
-  background-color: $accent;
-  color: #fff;
   transition: 0.3s ease-in-out;
+  background-color: #fff;
+  border: 0.2rem solid $accent;
+  color: #000;
+  @include box-shadow;
 }
 
 /////////////// contact section ///////////////
@@ -419,6 +423,7 @@ h4::after {
 .link:hover {
   background-color: $accent;
   text-decoration: none;
+  @include box-shadow;
 }
 
 /// ********* TABLET SCREEN ********* ///
@@ -547,7 +552,7 @@ h4::after {
 
 @media screen and (max-height: 400px) {
   .hero {
-    padding-top: 20rem;
+    padding-top: 15rem;
   }
   .arrow {
     display: none;

@@ -41,7 +41,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="white-text">© Paula Cavender</p>
+        <p className="white-text">© Paula Jayne Cavender</p>
       </div>
     </footer>
   );
