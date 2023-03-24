@@ -7,6 +7,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 13rem;
 }
 body {
   font-size: 2rem;
@@ -67,58 +68,63 @@ h1 {
 }
 
 /////////////// nav ///////////////
-// ul {
-//   display: flex;
-//   list-style: none;
-//   gap: 1rem;
-// }
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
 
-// .nav {
-//   display: flex;
-//   cursor: pointer;
-// }
+.nav {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem;
+}
 
 // //// mobile nav ////
 
-// .nav-items {
-//   position: fixed;
-//   top: 7.5rem;
-//   left: 0;
-//   height: calc(100vh - 7.5rem);
-//   width: 100%;
-//   padding-left: 3rem;
-//   background-color: $medium;
-//   flex-direction: column;
-//   justify-content: center;
-//   gap: 3rem;
-//   transform: translateX(100%);
-//   transition: 1.5s ease-in-out;
+.nav-items {
+  position: fixed;
+  top: 12.5rem;
+  left: 40%;
+  height: calc(100vh - 12.5rem);
+  width: 100%;
+  padding-left: 3rem;
+  background-color: $complementary;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  transform: translateX(100%);
+  transition: 1.5s ease-in-out;
 
-//   li {
-//     font-size: 3rem;
-//     border-left: $light solid 0.5rem;
-//     padding-left: 2rem;
-//   }
-//   a {
-//     color: none;
-//     padding: 0.5rem;
-//     @include swipe($light);
-//   }
-//   a:hover,
-//   a:active {
-//     @include swipe-hover($light);
-//   }
-// }
-// .nav-active {
-//   transform: translateX(0%);
-//   // max-height: max-content;
-// }
-// .menu-toggler {
-//   display: flex;
-//   img {
-//     height: 3rem;
-//   }
-// }
+  li {
+    font-size: 3rem;
+    border-left: #fff solid 0.5rem;
+    padding: 0 2rem 1rem 0;
+    list-style: none;
+  }
+  a {
+    padding: 0.5rem;
+  }
+  a:hover,
+  a:active,
+  li:hover {
+    border-color: $accent;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+.menu-toggler {
+  display: flex;
+  img {
+    height: 3rem;
+  }
+}
+.blur {
+  filter: blur(5px);
+  transition: 2s ease;
+}
 
 /////////////// main-content section ///////////////
 body {
@@ -173,13 +179,12 @@ section {
 .work {
   margin: 15rem auto;
 }
-a:link {
+a:link,
+a:visited {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
-// a:visited {
-//   color: #000;
-// }
+
 /////////////// hero section ///////////////
 
 .hero {
@@ -432,24 +437,27 @@ h4::after {
 
   /////////////// nav ///////////////
 
-  // .nav-items {
-  //   display: flex;
-  //   cursor: pointer;
-  //   position: static;
-  //   height: auto;
-  //   width: auto;
-  //   flex-direction: row;
-  //   transform: translateX(0%);
-  //   transition: none;
-  //   gap: 2rem;
-  //   li {
-  //     font-size: 2.5rem;
-  //     border: none;
-  //   }
-  // }
-  // .menu-toggler {
-  //   display: none;
-  // }
+  .nav-items {
+    display: flex;
+    cursor: pointer;
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: none;
+    gap: 2rem;
+    li {
+      font-size: 2.5rem;
+      border: none;
+    }
+    li a:hover {
+      color: $accent;
+    }
+  }
+  .menu-toggler {
+    display: none;
+  }
 
   /////////////// main-content section ///////////////
   .container {

@@ -8,6 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 13rem;
 }
 
 body {
@@ -47,6 +48,64 @@ h1 {
   color: #fff;
   text-align: end;
   font-size: 2.5rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.nav-items {
+  position: fixed;
+  top: 12.5rem;
+  left: 40%;
+  height: calc(100vh - 12.5rem);
+  width: 100%;
+  padding-left: 3rem;
+  background-color: #7464b2;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  transform: translateX(100%);
+  transition: 1.5s ease-in-out;
+}
+.nav-items li {
+  font-size: 3rem;
+  border-left: #fff solid 0.5rem;
+  padding: 0 2rem 1rem 0;
+  list-style: none;
+}
+.nav-items a {
+  padding: 0.5rem;
+}
+.nav-items a:hover,
+.nav-items a:active,
+.nav-items li:hover {
+  border-color: #64b29b;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.menu-toggler {
+  display: flex;
+}
+.menu-toggler img {
+  height: 3rem;
+}
+
+.blur {
+  filter: blur(5px);
+  transition: 2s ease;
 }
 
 body {
@@ -105,9 +164,10 @@ section {
   margin: 15rem auto;
 }
 
-a:link {
+a:link,
+a:visited {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .hero {
@@ -355,6 +415,27 @@ h4::after {
 }
 
 @media screen and (min-width: 768px) {
+  .nav-items {
+    display: flex;
+    cursor: pointer;
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: none;
+    gap: 2rem;
+  }
+  .nav-items li {
+    font-size: 2.5rem;
+    border: none;
+  }
+  .nav-items li a:hover {
+    color: #64b29b;
+  }
+  .menu-toggler {
+    display: none;
+  }
   .container {
     width: 90%;
   }

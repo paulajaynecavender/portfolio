@@ -1,11 +1,4 @@
-import { useState } from "react";
-
-const NavBar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const onClick = () => {
-    setToggleMenu(!toggleMenu);
-  };
-
+const NavBar = ({ onClick, toggleMenu }) => {
   return (
     <nav className="nav">
       <ul className={toggleMenu ? "nav-items nav-active" : "nav-items"}>
