@@ -86,9 +86,9 @@ ul {
 .nav-items {
   position: fixed;
   top: 12.5rem;
-  left: 40%;
+  right: 0;
   height: calc(100vh - 12.5rem);
-  width: 100%;
+  width: 65%;
   padding-left: 3rem;
   background-color: $complementary;
   flex-direction: column;
@@ -113,7 +113,7 @@ ul {
   }
 }
 .nav-active {
-  transform: translateX(0%);
+  transform: translateX(-0%);
 }
 .menu-toggler {
   display: flex;
