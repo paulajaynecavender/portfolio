@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 13rem;
+  scroll-padding-top: 14.5rem;
 }
 
 body {
@@ -435,6 +435,9 @@ h4::after {
   }
   .menu-toggler {
     display: none;
+  }
+  .blur {
+    filter: blur(0);
   }
   .container {
     width: 90%;
