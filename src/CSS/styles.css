@@ -72,16 +72,16 @@ ul {
 .nav-items {
   position: fixed;
   top: 7.5rem;
-  right: 0;
+  left: 0;
   height: calc(100vh - 7.5rem);
-  width: 65%;
+  width: 55%;
   padding-left: 3rem;
   background-color: #7464b2;
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  transform: translateX(100%);
-  transition: 1.5s ease-in-out;
+  transform: translateX(-100%);
+  transition: 1s ease-in-out;
 }
 .nav-items li {
   font-size: 3rem;
@@ -421,6 +421,15 @@ h4::after {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar-container {
+    position: relative;
+  }
+  .nav {
+    padding: 0;
+    position: absolute;
+    left: -2.9rem;
+    bottom: 3.1rem;
+  }
   .nav-items {
     display: flex;
     cursor: pointer;
@@ -433,8 +442,12 @@ h4::after {
     gap: 2rem;
   }
   .nav-items li {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     border: none;
+    padding: 0;
+  }
+  .nav-items li a {
+    padding: 0;
   }
   .nav-items li a:hover {
     color: #64b29b;
@@ -527,5 +540,11 @@ h4::after {
   }
   header {
     position: relative;
+  }
+  .nav-items {
+    gap: 1rem;
+  }
+  li {
+    padding: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
