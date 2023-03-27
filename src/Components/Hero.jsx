@@ -3,14 +3,14 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="container">
         <div className="hero-headline-container">
-          <p className="hero-name hero-text">
+          <div className="hero-name hero-text">
             Hi! My name is <h2>Paula Jayne Cavender</h2>
-          </p>
-          <p className="hero-description hero-text">
+          </div>
+          <div className="hero-description hero-text">
             I am a
             <span className="text-highlight"> front-end web developer </span>
             who enjoys seeing my creations come to life on the screen
-          </p>
+          </div>
         </div>
 
         <div className="hero-img-container">

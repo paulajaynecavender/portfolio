@@ -335,10 +335,11 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: auto;
+  height: 27.5rem;
 }
 .info-text {
   line-height: 2rem;
+  height: 13rem;
 }
 
 /// line after ///
@@ -374,7 +375,6 @@ h4::after {
 .btn-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 1rem;
 }
 .button {
   border: 0.2rem solid $accent;
@@ -483,7 +483,7 @@ h4::after {
 
   /////////////// main-content section ///////////////
   .container {
-    width: 90%;
+    width: 100%;
   }
   /////////////// hero section ///////////////
   .hero .container {
@@ -551,9 +551,7 @@ h4::after {
   /////////////// nav ///////////////
 
   /////////////// main-content section ///////////////
-  .container {
-    width: 100%;
-  }
+
   /////////////// hero section ///////////////
   .hero-img {
     width: 30rem;
