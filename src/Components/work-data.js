@@ -31,10 +31,11 @@ const myWork = [
   },
   {
     id: 4,
-    title: "Something",
-    stack: "pending, pending, pending",
-    description: "No idea what will be here yet",
-    img: "./assets/weather.png",
+    title: "Craft Counter App",
+    stack: "pending",
+    description:
+      "Keep track of your crochet and knitting with this handy app to count your rows",
+    img: "./assets/placeholder.jpg",
     live: "#",
     code: "#",
   },
