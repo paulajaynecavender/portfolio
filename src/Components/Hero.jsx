@@ -8,9 +8,8 @@ const Hero = () => {
           </div>
           <div className="hero-description hero-text">
             I am a
-            <span className="text-highlight"> front-end web developer, </span>
-            with an understanding of the back-end, who enjoys seeing my
-            creations come to life on the screen
+            <span className="text-highlight"> front-end web developer </span>
+            who enjoys seeing my creations come to life on the screen
           </div>
           <div className="hero-contact">
             <div className="button">
