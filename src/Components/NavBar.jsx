@@ -17,11 +17,6 @@ const NavBar = ({ onClick, toggleMenu }) => {
             projects
           </a>
         </li>
-        <li>
-          <a href="#contact" onClick={onClick}>
-            contact
-          </a>
-        </li>
       </ul>
       <div className="menu-toggler" onClick={onClick}>
         <img

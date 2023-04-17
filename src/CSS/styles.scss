@@ -247,6 +247,31 @@ h2 {
     transform: translate(0px, 6px);
   }
 }
+.hero-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+
+  img {
+    width: 5rem;
+    padding: 0.5rem;
+  }
+  div:hover p {
+    color: #000;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+}
+
+.contact-text {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
 
 /////////////// skills section ///////////////
 
@@ -390,6 +415,7 @@ h4::after {
   background-color: #fff;
   border: 0.2rem solid $accent;
   color: #000;
+  cursor: pointer;
   @include box-shadow;
 }
 
@@ -503,6 +529,13 @@ h4::after {
   }
   .hero-img {
     width: 20rem;
+  }
+  .hero-contact {
+    justify-content: left;
+    max-width: 30rem;
+    div {
+      margin-right: 1rem;
+    }
   }
 
   /////////////// skills section ///////////////

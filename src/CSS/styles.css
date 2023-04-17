@@ -238,6 +238,31 @@ h2 {
     transform: translate(0px, 6px);
   }
 }
+.hero-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.hero-contact img {
+  width: 5rem;
+  padding: 0.5rem;
+}
+.hero-contact div:hover p {
+  color: #000;
+}
+.hero-contact div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.contact-text {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
 .icons-grid {
   max-width: 50rem;
   margin: 0 auto;
@@ -373,6 +398,7 @@ h4::after {
   background-color: #fff;
   border: 0.2rem solid #64b29b;
   color: #000;
+  cursor: pointer;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -479,6 +505,13 @@ h4::after {
   }
   .hero-img {
     width: 20rem;
+  }
+  .hero-contact {
+    justify-content: left;
+    max-width: 30rem;
+  }
+  .hero-contact div {
+    margin-right: 1rem;
   }
   .icons-grid div {
     padding: 1.2rem;
