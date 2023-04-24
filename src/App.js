@@ -10,6 +10,8 @@ import FantasyFootball from "./Components/FantasyFootball";
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [modal, setModal] = useState(false);
+
   const onClick = () => {
     setToggleMenu(!toggleMenu);
   };
@@ -19,8 +21,8 @@ function App() {
       <div className={!toggleMenu ? "main-container" : "main-container blur"}>
         <Hero />
         <Skills />
-        <Work />
-        <FantasyFootball />
+        <Work setModal={setModal} />
+        <FantasyFootball modal={modal} setModal={setModal} />
       </div>
       <Footer />
     </div>

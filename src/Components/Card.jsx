@@ -1,7 +1,7 @@
 import Links from "./Links";
 import myWork from "./work-data";
 
-const Card = () => {
+const Card = ({ setModal }) => {
   return (
     <>
       {myWork.map((work) => {
@@ -15,7 +15,7 @@ const Card = () => {
                 <div className="stack">
                   <p>{work.stack}</p>
                 </div>
-                <Links work={work} />
+                <Links work={work} setModal={setModal} />
                 {/* if work.live = fantasy footabll do this  otherwise, do this */}
               </div>
             </div>

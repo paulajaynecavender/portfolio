@@ -1,11 +1,15 @@
-const Links = ({ work }) => {
+const Links = ({ work, setModal }) => {
+  const openModal = () => {
+    setModal((current) => !current);
+  };
+
   switch (work.id) {
     case 3:
       return (
         <div className="btn-container">
-          <a className="button" href={work.live}>
-            test
-          </a>
+          <button className="button" onClick={openModal}>
+            view project
+          </button>
           <a
             className="button"
             href={work.code}

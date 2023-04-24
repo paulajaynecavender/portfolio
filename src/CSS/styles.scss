@@ -407,6 +407,8 @@ h4::after {
   border-radius: 1rem;
   color: #fff;
   background-color: $accent;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .button:hover,
@@ -417,6 +419,37 @@ h4::after {
   color: #000;
   cursor: pointer;
   @include box-shadow;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.modal-open {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 90%;
+  background-color: #64b29b;
+  padding: 1rem;
+}
+
+.close-modal {
+  cursor: pointer;
+  font-weight: bolder;
+  text-align: right;
+}
+
+.screenshots {
+  height: 95%;
+  width: 100%;
+  overflow: auto;
+  img {
+    width: 100%;
+  }
 }
 
 /////////////// contact section ///////////////
@@ -552,7 +585,9 @@ h4::after {
       }
     }
   }
-
+  .modal-open {
+    max-width: 80rem;
+  }
   /////////////// work section ///////////////
   .cards-container {
     width: 70rem;
