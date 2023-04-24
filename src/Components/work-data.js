@@ -1,4 +1,3 @@
-import FantasyFootball from "./FantasyFootball";
 const myWork = [
   {
     id: 1,
