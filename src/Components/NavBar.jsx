@@ -8,7 +8,7 @@ const NavBar = ({ onClick, toggleMenu }) => {
           </a>
         </li>
         <li>
-          <a href="#skills " onClick={onClick}>
+          <a href="#skills" onClick={onClick}>
             skills
           </a>
         </li>

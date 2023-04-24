@@ -6,6 +6,7 @@ import Skills from "./Components/Skills";
 import Work from "./Components/Work";
 import { useState } from "react";
 import "./CSS/styles.css";
+import FantasyFootball from "./Components/FantasyFootball";
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -19,7 +20,7 @@ function App() {
         <Hero />
         <Skills />
         <Work />
-        {/* <About /> */}
+        <FantasyFootball />
       </div>
       <Footer />
     </div>

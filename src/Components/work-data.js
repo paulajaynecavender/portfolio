@@ -1,3 +1,4 @@
+import FantasyFootball from "./FantasyFootball";
 const myWork = [
   {
     id: 1,
@@ -26,7 +27,7 @@ const myWork = [
     description:
       "Full-stack group project using an API to create a fantasy football league to share and play with your friends. It features login verification, account management, database storage and a responsive design.",
     img: "./assets/football.png",
-    live: "http://fantasy-football-app.uk/",
+    live: "#fantasyFootball",
     code: "#",
   },
   {

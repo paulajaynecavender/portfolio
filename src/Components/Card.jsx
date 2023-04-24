@@ -1,3 +1,4 @@
+import Links from "./Links";
 import myWork from "./work-data";
 
 const Card = () => {
@@ -14,24 +15,8 @@ const Card = () => {
                 <div className="stack">
                   <p>{work.stack}</p>
                 </div>
-                <div className="btn-container">
-                  <a
-                    className="button"
-                    href={work.live}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    live version
-                  </a>
-                  <a
-                    className="button"
-                    href={work.code}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    view code
-                  </a>
-                </div>
+                <Links work={work} />
+                {/* if work.live = fantasy footabll do this  otherwise, do this */}
               </div>
             </div>
           </div>
