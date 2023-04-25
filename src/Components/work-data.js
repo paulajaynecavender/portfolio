@@ -36,7 +36,7 @@ const myWork = [
     description:
       "Keep track of your crochet and knitting with this handy app to count your rows",
     img: "./assets/placeholder.jpg",
-    live: "#",
+    live: "https://luxury-bombolone-4bce1f.netlify.app/",
     code: "#",
   },
 ];
