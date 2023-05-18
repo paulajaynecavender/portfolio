@@ -32,12 +32,12 @@ const myWork = [
   {
     id: 4,
     title: "Craft Counter App",
-    stack: "pending",
+    stack: "html, css, react, redux, sass",
     description:
-      "Keep track of your crochet and knitting with this handy app to count your rows",
-    img: "./assets/placeholder.jpg",
+      "Keep track of your crochet and knitting with this handy app to count your rows. This utilises react redux to store each project and counter",
+    img: "./assets/craft-app.png",
     live: "https://luxury-bombolone-4bce1f.netlify.app/",
-    code: "#",
+    code: "https://github.com/paulajaynecavender/craft-app",
   },
 ];
 export default myWork;
