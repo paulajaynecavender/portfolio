@@ -33,7 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5.6rem;
+  height: 4.2rem;
 }
 
 h1 {
@@ -53,25 +53,25 @@ h1 {
   width: 100%;
 }
 
-ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
 .nav {
   display: flex;
   justify-content: center;
   cursor: pointer;
 }
 
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
 .nav-items {
   position: fixed;
-  top: 5.6rem;
+  top: 4rem;
   left: 0;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 4rem);
   width: 70%;
-  padding-left: 3rem;
+  padding-left: 0.5rem;
   background-color: #7464b2;
   flex-direction: column;
   justify-content: center;
@@ -85,12 +85,17 @@ ul {
   list-style: none;
 }
 .nav-items a {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
 .nav-items a:hover,
 .nav-items a:active,
 .nav-items li:hover {
   border-color: #64b29b;
+}
+.nav-items a:hover a,
+.nav-items a:active a,
+.nav-items li:hover a {
+  color: #64b29b;
 }
 
 .nav-active {
@@ -109,13 +114,8 @@ ul {
   transition: 2s ease;
 }
 
-body {
-  background-color: #fff;
-}
-
 .button:active,
-a:active,
-.link:active {
+a:active {
   transform: scale(0.9);
 }
 
@@ -158,7 +158,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 4rem);
   position: relative;
 }
 
@@ -254,12 +254,6 @@ h2 {
   font-size: 2rem;
   line-height: 1.5rem;
   text-align: center;
-}
-
-.link {
-  color: #000;
-  text-decoration: none;
-  font-size: 2rem;
 }
 
 .icons-grid {
@@ -450,7 +444,20 @@ h4::after {
   text-align: center;
 }
 
+.link {
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
+  border-left: 0.5rem solid hsla(0, 0%, 100%, 0);
+  padding-left: 0.5rem;
+}
+.link p {
+  color: #000;
+}
+
+.link:active,
 .link:hover {
+  border-color: #64b29b;
   color: #64b29b;
 }
 
@@ -459,6 +466,9 @@ h4::after {
   flex-direction: column;
   margin-top: 4rem;
   padding-left: 2rem;
+}
+.contact-btn-container :hover p {
+  color: #64b29b;
 }
 
 .contact-btn-container img {
@@ -601,20 +611,23 @@ h4::after {
     width: 137rem;
   }
   .work {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 4rem);
   }
 }
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 450px) {
   .hero {
-    padding-top: 15rem;
+    padding-top: 8rem;
   }
   .arrow {
     display: none;
   }
   .nav-items {
-    gap: 1rem;
+    gap: 0.5rem;
   }
   li {
     padding: 0;
+  }
+  section {
+    height: auto;
   }
 }/*# sourceMappingURL=styles.css.map */
