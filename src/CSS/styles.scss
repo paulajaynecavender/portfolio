@@ -142,7 +142,7 @@ a:active {
 .title,
 .hero-headline-container {
   font-size: 3rem;
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 1rem 2rem 1rem;
   position: relative;
   width: fit-content;
 }
@@ -187,9 +187,10 @@ a:visited {
   color: $dominant;
 }
 .description {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 3rem;
   line-height: 2.2rem;
+  padding-left: 1rem;
 }
 /////////////// hero section ///////////////
 
@@ -201,6 +202,7 @@ a:visited {
 
 .hero-description {
   margin-bottom: 2rem;
+  text-wrap: balance;
 }
 .hero-text {
   line-height: 2.5rem;
@@ -274,32 +276,31 @@ h2 {
 .icons-grid {
   max-width: 50rem;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 16rem);
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
 
   div {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 0.5rem;
-    padding: 1.2rem;
-    width: 8rem;
-    @include box-shadow;
-    @include border-radius;
-
+    width: 11rem;
     img {
       width: 4rem;
       margin-bottom: 0.5rem;
     }
     p {
+      margin-left: 1.5rem;
       font-size: 1.6rem;
     }
   }
-
   div:hover {
     animation: shake 0.4s;
     animation-iteration-count: 1;
+  }
+  .stack-name {
+    font-family: "Sulphur Point";
   }
 
   @keyframes shake {
@@ -471,12 +472,17 @@ h4::after {
 .link {
   color: #000;
   text-decoration: none;
-  font-size: 2rem;
   border-left: 0.5rem solid hsla(0, 0%, 100%, 0);
   padding-left: 0.5rem;
+  cursor: pointer;
   p {
     color: #000;
   }
+}
+.inline {
+  padding: 0;
+  border-left: none;
+  border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0);
 }
 
 .link:active,
@@ -518,9 +524,6 @@ h4::after {
   }
   .nav {
     padding: 0;
-    // position: absolute;
-    // left: -2.9rem;
-    // bottom: 3.1rem;
   }
   .nav-items {
     display: flex;
@@ -557,7 +560,6 @@ h4::after {
     width: 100%;
   }
   .description {
-    font-size: 2.4rem;
     padding-right: 15rem;
   }
   /////////////// hero section ///////////////
@@ -570,7 +572,6 @@ h4::after {
     margin: auto 0;
   }
   .hero-description {
-    margin-bottom: 0rem;
     margin-right: 10rem;
   }
   .hero-img-container {
@@ -588,10 +589,24 @@ h4::after {
   }
 
   /////////////// skills section ///////////////
+  // .icons-grid {
+  //   div {
+  //     padding: 1.2rem;
+  //     width: 10rem;
+
+  //     img {
+  //       width: 5rem;
+  //     }
+  //     p {
+  //       font-size: 1.8rem;
+  //     }
+  //   }
+  // }
   .icons-grid {
+    grid-template-columns: repeat(4, 16rem);
+    grid-template-rows: repeat(2, 1fr);
     div {
       padding: 1.2rem;
-      width: 10rem;
 
       img {
         width: 5rem;
@@ -645,13 +660,9 @@ h4::after {
   /////////////// work section ///////////////
 
   .icons-grid {
-    max-width: 120rem;
     div {
       width: 12rem;
       margin: 1rem;
-      img {
-        width: 6rem;
-      }
     }
   }
   .contact-btn-container .contact-text {

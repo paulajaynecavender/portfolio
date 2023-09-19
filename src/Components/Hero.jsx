@@ -9,7 +9,8 @@ const Hero = () => {
           <div className="hero-description hero-text">
             I am a
             <span className="text-highlight"> front-end web developer </span>
-            who enjoys seeing my creations come to life on the screen
+            who enjoys making things and seeing my creations come to life. I
+            specialise in React.js but am always keen to learn more!
           </div>
           <div className="hero-contact">
             <div className="button">

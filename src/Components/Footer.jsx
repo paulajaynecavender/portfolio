@@ -11,7 +11,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <p className="white-text">
-                Check out the code <span className="link">here</span>
+                Check out the code <span className="link inline">here</span>
               </p>
             </a>
           </div>

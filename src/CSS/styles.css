@@ -122,7 +122,7 @@ a:active {
 .title,
 .hero-headline-container {
   font-size: 3rem;
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 1rem 2rem 1rem;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -169,9 +169,10 @@ a:visited {
 }
 
 .description {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 3rem;
   line-height: 2.2rem;
+  padding-left: 1rem;
 }
 
 .hero .container {
@@ -182,6 +183,7 @@ a:visited {
 
 .hero-description {
   margin-bottom: 2rem;
+  text-wrap: balance;
 }
 
 .hero-text {
@@ -259,30 +261,31 @@ h2 {
 .icons-grid {
   max-width: 50rem;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 16rem);
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
 }
 .icons-grid div {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 0.5rem;
-  padding: 1.2rem;
-  width: 8rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 3rem;
+  width: 11rem;
 }
 .icons-grid div img {
   width: 4rem;
   margin-bottom: 0.5rem;
 }
 .icons-grid div p {
+  margin-left: 1.5rem;
   font-size: 1.6rem;
 }
 .icons-grid div:hover {
   animation: shake 0.4s;
   animation-iteration-count: 1;
+}
+.icons-grid .stack-name {
+  font-family: "Sulphur Point";
 }
 @keyframes shake {
   0% {
@@ -447,12 +450,18 @@ h4::after {
 .link {
   color: #000;
   text-decoration: none;
-  font-size: 2rem;
   border-left: 0.5rem solid hsla(0, 0%, 100%, 0);
   padding-left: 0.5rem;
+  cursor: pointer;
 }
 .link p {
   color: #000;
+}
+
+.inline {
+  padding: 0;
+  border-left: none;
+  border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0);
 }
 
 .link:active,
@@ -528,7 +537,6 @@ h4::after {
     width: 100%;
   }
   .description {
-    font-size: 2.4rem;
     padding-right: 15rem;
   }
   .hero .container {
@@ -540,7 +548,6 @@ h4::after {
     margin: auto 0;
   }
   .hero-description {
-    margin-bottom: 0rem;
     margin-right: 10rem;
   }
   .hero-img-container {
@@ -556,9 +563,12 @@ h4::after {
   .hero-contact div {
     margin-right: 1rem;
   }
+  .icons-grid {
+    grid-template-columns: repeat(4, 16rem);
+    grid-template-rows: repeat(2, 1fr);
+  }
   .icons-grid div {
     padding: 1.2rem;
-    width: 10rem;
   }
   .icons-grid div img {
     width: 5rem;
@@ -592,15 +602,9 @@ h4::after {
   .hero-img {
     width: 30rem;
   }
-  .icons-grid {
-    max-width: 120rem;
-  }
   .icons-grid div {
     width: 12rem;
     margin: 1rem;
-  }
-  .icons-grid div img {
-    width: 6rem;
   }
   .contact-btn-container .contact-text {
     font-size: 2.5rem;

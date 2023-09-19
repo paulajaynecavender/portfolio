@@ -7,8 +7,8 @@ const Work = ({ setModal }) => {
       <div className="container">
         <h3 className="title">My Projects</h3>
         <p class="description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aut
-          delectus! Animi nam, accusamus ducimus, distinctio consequuntur.
+          Here are some projects that I have worked on. For more, don't forget
+          to check out my <span className="link inline">GitHub!</span>
         </p>
         <div className="cards-container">
           <Card setModal={setModal} />
