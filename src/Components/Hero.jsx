@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-headline-container">
           <div className="hero-name hero-text">
-            Hi! My name is <h2>Paula Jayne Cavender</h2>
+            Hi! My name is <h2>Paula Cavender</h2>
           </div>
           <div className="hero-description hero-text">
             I am a

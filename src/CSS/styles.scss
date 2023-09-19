@@ -7,7 +7,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  scroll-padding-top: 6rem;
 }
 body {
   font-size: 2rem;
@@ -46,16 +46,15 @@ h4 {
 
 header {
   position: fixed;
-  background-color: #7464b2;
   min-width: 100%;
   z-index: 100;
-  @include flex-center-between;
-  justify-content: initial;
-  display: flex;
 }
 .header {
   padding: 0 1.5rem;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.6rem;
 }
 h1 {
   font-size: 3rem;
@@ -65,6 +64,11 @@ h1 {
   color: #fff;
   text-align: end;
   font-size: 2.5rem;
+}
+.header,
+.footer {
+  background-color: #7464b2;
+  width: 100%;
 }
 
 /////////////// nav ///////////////
@@ -78,23 +82,16 @@ ul {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 1rem;
 }
 
 // //// mobile nav ////
 
-.navbar-container {
-  position: absolute;
-  left: 0;
-  top: 3rem;
-}
-
 .nav-items {
   position: fixed;
-  top: 7.5rem;
+  top: 5.6rem;
   left: 0;
-  height: calc(100vh - 7.5rem);
-  width: 55%;
+  height: calc(100vh - 5rem);
+  width: 70%;
   padding-left: 3rem;
   background-color: $complementary;
   flex-direction: column;
@@ -104,13 +101,13 @@ ul {
   transition: 1s ease-in-out;
 
   li {
-    font-size: 3rem;
+    font-size: 6rem;
     border-left: #fff solid 0.5rem;
-    padding: 0 2rem 1rem 0;
+    // padding: 0 2rem 1rem 0;
     list-style: none;
   }
   a {
-    padding: 0.5rem;
+    padding-left: 2rem;
   }
   a:hover,
   a:active,
@@ -137,7 +134,7 @@ body {
   background-color: $dominant;
 }
 .button:active,
-.contact-box a:active,
+a:active,
 .link:active {
   transform: scale(0.9);
 }
@@ -179,24 +176,22 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
+  height: calc(100vh - 5rem);
+  position: relative;
 }
 
-.skills,
-.work {
-  margin: 15rem auto;
-}
 a:link,
 a:visited {
   text-decoration: none;
   color: #fff;
 }
-
+.description {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  line-height: 2.2rem;
+}
 /////////////// hero section ///////////////
 
-.hero {
-  height: 100vh;
-  position: relative;
-}
 .hero .container {
   display: flex;
   flex-direction: column;
@@ -268,9 +263,14 @@ h2 {
 }
 
 .contact-text {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.5rem;
   text-align: center;
+}
+.link {
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 /////////////// skills section ///////////////
@@ -330,6 +330,10 @@ h2 {
 }
 
 /////////////// work section ///////////////
+
+.work {
+  height: auto;
+}
 
 h4 {
   font-size: 2.2rem;
@@ -453,12 +457,7 @@ h4::after {
 }
 
 /////////////// contact section ///////////////
-.contact {
-  background-color: $complementary;
-  .container {
-    padding: 3rem 0;
-  }
-}
+
 .contact-container {
   .created-by {
     display: flex;
@@ -467,34 +466,34 @@ h4::after {
     margin: 0 auto;
   }
 }
-.contact-box {
-  display: flex;
-  justify-content: center;
 
-  img {
-    width: 5rem;
-  }
-  img:hover {
-    border-radius: 2.5rem;
-    @include box-shadow;
-  }
-  a {
-    display: flex;
-    margin: 0.5rem;
-  }
-}
 .white-text {
   color: #fff;
   text-align: center;
 }
 
-.link {
-  text-decoration: underline;
-}
 .link:hover {
-  background-color: $accent;
-  text-decoration: none;
-  @include box-shadow;
+  color: $accent;
+}
+
+.contact-btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+.contact-btn-container img {
+  width: 4rem;
+  margin-right: 1rem;
+}
+.contact-btn-container .contact-button {
+  margin-bottom: 2rem;
+}
+.contact-btn-container a {
+  display: flex;
+}
+.contact-btn-container p {
+  margin: auto 0;
 }
 
 /// ********* TABLET SCREEN ********* ///
@@ -507,9 +506,9 @@ h4::after {
   }
   .nav {
     padding: 0;
-    position: absolute;
-    left: -2.9rem;
-    bottom: 3.1rem;
+    // position: absolute;
+    // left: -2.9rem;
+    // bottom: 3.1rem;
   }
   .nav-items {
     display: flex;
@@ -521,6 +520,7 @@ h4::after {
     transform: translateX(0%);
     transition: none;
     gap: 2rem;
+    padding: 0;
     li {
       font-size: 2.2rem;
       border: none;
@@ -543,6 +543,10 @@ h4::after {
   /////////////// main-content section ///////////////
   .container {
     width: 100%;
+  }
+  .description {
+    font-size: 2.4rem;
+    padding-right: 15rem;
   }
   /////////////// hero section ///////////////
   .hero .container {
@@ -607,8 +611,8 @@ h4::after {
       margin: 0;
     }
   }
-  .contact-box {
-    margin: 0 1rem;
+  .contact-btn-container {
+    align-items: center;
   }
 }
 
@@ -638,15 +642,21 @@ h4::after {
       }
     }
   }
+  .contact-btn-container .contact-text {
+    font-size: 2.5rem;
+  }
 }
 /// ********* LARGE MONITOR ********* ///
 @media screen and (min-width: 1440px) {
   .cards-container {
     width: 137rem;
   }
+  .work {
+    height: calc(100vh - 5rem);
+  }
 }
 
-/////// lanscape mobile view ////////
+/////// landscape mobile view ////////
 @media screen and (max-height: 400px) {
   .hero {
     padding-top: 15rem;

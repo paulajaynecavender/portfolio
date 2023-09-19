@@ -7,6 +7,7 @@ import Work from "./Components/Work";
 import { useState } from "react";
 import "./CSS/styles.css";
 import FantasyFootball from "./Components/FantasyFootball";
+import Contact from "./Components/Contact";
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         <Skills />
         <Work setModal={setModal} />
         <FantasyFootball modal={modal} setModal={setModal} />
+        <Contact />
       </div>
       <Footer />
     </div>

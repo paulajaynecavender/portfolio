@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -24,19 +24,16 @@ h4 {
 
 header {
   position: fixed;
-  background-color: #7464b2;
   min-width: 100%;
   z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: initial;
-  display: flex;
 }
 
 .header {
   padding: 0 1.5rem;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.6rem;
 }
 
 h1 {
@@ -50,6 +47,12 @@ h1 {
   font-size: 2.5rem;
 }
 
+.header,
+.footer {
+  background-color: #7464b2;
+  width: 100%;
+}
+
 ul {
   display: flex;
   list-style: none;
@@ -60,21 +63,14 @@ ul {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 1rem;
-}
-
-.navbar-container {
-  position: absolute;
-  left: 0;
-  top: 3rem;
 }
 
 .nav-items {
   position: fixed;
-  top: 7.5rem;
+  top: 5.6rem;
   left: 0;
-  height: calc(100vh - 7.5rem);
-  width: 55%;
+  height: calc(100vh - 5rem);
+  width: 70%;
   padding-left: 3rem;
   background-color: #7464b2;
   flex-direction: column;
@@ -84,13 +80,12 @@ ul {
   transition: 1s ease-in-out;
 }
 .nav-items li {
-  font-size: 3rem;
+  font-size: 6rem;
   border-left: #fff solid 0.5rem;
-  padding: 0 2rem 1rem 0;
   list-style: none;
 }
 .nav-items a {
-  padding: 0.5rem;
+  padding-left: 2rem;
 }
 .nav-items a:hover,
 .nav-items a:active,
@@ -119,7 +114,7 @@ body {
 }
 
 .button:active,
-.contact-box a:active,
+a:active,
 .link:active {
   transform: scale(0.9);
 }
@@ -163,11 +158,8 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-}
-
-.skills,
-.work {
-  margin: 15rem auto;
+  height: calc(100vh - 5rem);
+  position: relative;
 }
 
 a:link,
@@ -176,9 +168,10 @@ a:visited {
   color: #fff;
 }
 
-.hero {
-  height: 100vh;
-  position: relative;
+.description {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  line-height: 2.2rem;
 }
 
 .hero .container {
@@ -258,9 +251,15 @@ h2 {
 }
 
 .contact-text {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.5rem;
   text-align: center;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 .icons-grid {
@@ -310,6 +309,10 @@ h2 {
 }
 .icons-grid p {
   padding-top: 0.3rem;
+}
+
+.work {
+  height: auto;
 }
 
 h4 {
@@ -435,13 +438,6 @@ h4::after {
   width: 100%;
 }
 
-.contact {
-  background-color: #7464b2;
-}
-.contact .container {
-  padding: 3rem 0;
-}
-
 .contact-container .created-by {
   display: flex;
   flex-direction: column;
@@ -449,35 +445,37 @@ h4::after {
   margin: 0 auto;
 }
 
-.contact-box {
-  display: flex;
-  justify-content: center;
-}
-.contact-box img {
-  width: 5rem;
-}
-.contact-box img:hover {
-  border-radius: 2.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-}
-.contact-box a {
-  display: flex;
-  margin: 0.5rem;
-}
-
 .white-text {
   color: #fff;
   text-align: center;
 }
 
-.link {
-  text-decoration: underline;
+.link:hover {
+  color: #64b29b;
 }
 
-.link:hover {
-  background-color: #64b29b;
-  text-decoration: none;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+.contact-btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+
+.contact-btn-container img {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
+.contact-btn-container .contact-button {
+  margin-bottom: 2rem;
+}
+
+.contact-btn-container a {
+  display: flex;
+}
+
+.contact-btn-container p {
+  margin: auto 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -486,9 +484,6 @@ h4::after {
   }
   .nav {
     padding: 0;
-    position: absolute;
-    left: -2.9rem;
-    bottom: 3.1rem;
   }
   .nav-items {
     display: flex;
@@ -500,6 +495,7 @@ h4::after {
     transform: translateX(0%);
     transition: none;
     gap: 2rem;
+    padding: 0;
   }
   .nav-items li {
     font-size: 2.2rem;
@@ -520,6 +516,10 @@ h4::after {
   }
   .container {
     width: 100%;
+  }
+  .description {
+    font-size: 2.4rem;
+    padding-right: 15rem;
   }
   .hero .container {
     flex-direction: row;
@@ -574,8 +574,8 @@ h4::after {
   .contact-container .created-by {
     margin: 0;
   }
-  .contact-box {
-    margin: 0 1rem;
+  .contact-btn-container {
+    align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -592,10 +592,16 @@ h4::after {
   .icons-grid div img {
     width: 6rem;
   }
+  .contact-btn-container .contact-text {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (min-width: 1440px) {
   .cards-container {
     width: 137rem;
+  }
+  .work {
+    height: calc(100vh - 5rem);
   }
 }
 @media screen and (max-height: 400px) {
