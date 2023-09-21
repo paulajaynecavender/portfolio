@@ -27,7 +27,7 @@ const myWork = [
       "Full-stack group project using an API to create a fantasy football league to share and play with your friends. It features login verification, account management, database storage and a responsive design.",
     img: "./assets/football.png",
     live: "#fantasyFootball",
-    code: "#",
+    code: "https://github.com/russellcs/fantasy-football-app",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const myWork = [
     description:
       "Keep track of your crochet and knitting with this handy app to count your rows. This utilises react redux to store each project and counter",
     img: "./assets/craft-app.png",
-    live: "https://luxury-bombolone-4bce1f.netlify.app/",
+    live: "https://craft-app-paula-cavender.netlify.app",
     code: "https://github.com/paulajaynecavender/craft-app",
   },
 ];
