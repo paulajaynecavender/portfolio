@@ -6,7 +6,22 @@ const Work = ({ setModal }) => {
     <section className="work" id="work">
       <div className="container">
         <h3 className="title">My Projects</h3>
-
+        <p class="description">
+          Here are some projects that I have worked on. For more, don't forget
+          to check out my{" "}
+          <span
+            className="link inline"
+            href="https://github.com/paulajaynecavender"
+          >
+            <a
+              href="https://github.com/paulajaynecavender"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub!
+            </a>
+          </span>
+        </p>
         <div className="cards-container">
           <Card setModal={setModal} />
         </div>

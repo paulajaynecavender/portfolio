@@ -4,11 +4,11 @@ const Header = ({ onClick, toggleMenu }) => {
   return (
     <header>
       <div className="header">
-        <h1>PAULA JAYNE CAVENDER</h1>
-        <p className="header-text">front-end web developer</p>
+        {/* <p className="header-text">front-end web developer</p> */}
         <div className="navbar-container">
           <NavBar onClick={onClick} toggleMenu={toggleMenu} />
         </div>
+        <h1>Paula Cavender</h1>
       </div>
     </header>
   );
