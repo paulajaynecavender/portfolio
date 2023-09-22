@@ -3,7 +3,7 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="container">
         <h3 className="title skills-title">Tech Stack Skills</h3>
-        <p class="description">
+        <p className="description">
           I specialise in React.js but am always keen to learn more!
         </p>
         <div className="icons-grid">

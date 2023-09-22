@@ -28,6 +28,11 @@ header {
   z-index: 100;
 }
 
+header,
+footer {
+  background-color: #7464b2;
+}
+
 .header {
   padding: 0 1.5rem;
   display: flex;
@@ -49,7 +54,6 @@ h1 {
 
 .header,
 .footer {
-  background-color: #7464b2;
   width: 100%;
 }
 
