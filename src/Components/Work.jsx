@@ -6,7 +6,7 @@ const Work = ({ setModal }) => {
     <section className="work" id="work">
       <div className="container">
         <h3 className="title">My Projects</h3>
-        <p class="description">
+        <p className="description">
           Here are some projects that I have worked on. For more, don't forget
           to check out my{" "}
           <span

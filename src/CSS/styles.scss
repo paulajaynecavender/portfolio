@@ -107,6 +107,7 @@ ul {
   }
   a {
     padding-left: 1.5rem;
+    color: $dominant;
   }
   a:hover,
   a:active,
@@ -180,11 +181,14 @@ section {
   height: calc(100vh - 4rem);
   position: relative;
 }
-
 a:link,
 a:visited {
   text-decoration: none;
-  color: $dominant;
+}
+.link a:link,
+.link a:visited {
+  text-decoration: none;
+  color: #000;
 }
 .description {
   font-size: 2.4rem;
@@ -254,14 +258,18 @@ h2 {
   img {
     width: 5rem;
     padding: 0.5rem;
+    margin: auto 0;
   }
   div:hover p {
     color: #000;
   }
   div {
-    display: flex;
-    align-items: center;
     margin-right: 1rem;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -269,6 +277,7 @@ h2 {
   font-size: 2rem;
   line-height: 1.5rem;
   text-align: center;
+  color: $dominant;
 }
 
 /////////////// skills section ///////////////
@@ -467,10 +476,13 @@ h4::after {
 .white-text {
   color: $dominant;
   text-align: center;
+  a:link,
+  a:visited {
+    color: $dominant;
+  }
 }
 
 .link {
-  color: #000;
   text-decoration: none;
   border-left: 0.5rem solid hsla(0, 0%, 100%, 0);
   padding-left: 0.5rem;
@@ -485,13 +497,16 @@ h4::after {
 .inline {
   padding: 0;
   border-left: none;
-  border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0);
+  // border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0);
+  border-bottom: 0.1rem solid $accent;
+  :hover {
+    border-bottom: 0.5rem solid $accent;
+  }
 }
 
 .link:active,
 .link:hover {
   border-color: $accent;
-  color: $accent;
 }
 
 .contact-btn-container {

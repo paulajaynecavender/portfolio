@@ -3,10 +3,9 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="container">
         <h3 className="title skills-title">Tech Stack Skills</h3>
-        {/* <p class="description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aut
-          delectus! Animi nam, accusamus ducimus, distinctio consequuntur.
-        </p> */}
+        <p class="description">
+          I specialise in React.js but am always keen to learn more!
+        </p>
         <div className="icons-grid">
           <div>
             <img src="https://skillicons.dev/icons?i=html" alt="html icon" />

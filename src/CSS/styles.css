@@ -86,6 +86,7 @@ ul {
 }
 .nav-items a {
   padding-left: 1.5rem;
+  color: #fff;
 }
 .nav-items a:hover,
 .nav-items a:active,
@@ -165,7 +166,12 @@ section {
 a:link,
 a:visited {
   text-decoration: none;
-  color: #fff;
+}
+
+.link a:link,
+.link a:visited {
+  text-decoration: none;
+  color: #000;
 }
 
 .description {
@@ -242,20 +248,25 @@ h2 {
 .hero-contact img {
   width: 5rem;
   padding: 0.5rem;
+  margin: auto 0;
 }
 .hero-contact div:hover p {
   color: #000;
 }
 .hero-contact div {
-  display: flex;
-  align-items: center;
   margin-right: 1rem;
+}
+.hero-contact a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-text {
   font-size: 2rem;
   line-height: 1.5rem;
   text-align: center;
+  color: #fff;
 }
 
 .icons-grid {
@@ -446,9 +457,12 @@ h4::after {
   color: #fff;
   text-align: center;
 }
+.white-text a:link,
+.white-text a:visited {
+  color: #fff;
+}
 
 .link {
-  color: #000;
   text-decoration: none;
   border-left: 0.5rem solid hsla(0, 0%, 100%, 0);
   padding-left: 0.5rem;
@@ -465,13 +479,15 @@ h4::after {
 .inline {
   padding: 0;
   border-left: none;
-  border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0);
+  border-bottom: 0.1rem solid #64b29b;
+}
+.inline :hover {
+  border-bottom: 0.5rem solid #64b29b;
 }
 
 .link:active,
 .link:hover {
   border-color: #64b29b;
-  color: #64b29b;
 }
 
 .contact-btn-container {

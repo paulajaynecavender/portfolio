@@ -8,7 +8,7 @@ const Header = ({ onClick, toggleMenu }) => {
         <div className="navbar-container">
           <NavBar onClick={onClick} toggleMenu={toggleMenu} />
         </div>
-        <h1>Paula Cavender</h1>
+        <h1>paulacavender.dev</h1>
       </div>
     </header>
   );
