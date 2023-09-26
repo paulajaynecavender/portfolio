@@ -165,6 +165,8 @@ section {
   align-content: center;
   height: calc(100vh - 4rem);
   position: relative;
+  top: 100px;
+  opacity: 0;
 }
 
 a:link,

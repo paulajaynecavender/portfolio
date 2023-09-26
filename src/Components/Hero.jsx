@@ -1,6 +1,8 @@
+// import SplitType from "split-type";
+
 const Hero = () => {
   return (
-    <section className="hero" id="hero">
+    <section className="hero section" id="hero">
       <div className="container">
         <div className="hero-headline-container">
           <div className="hero-name hero-text">
