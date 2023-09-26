@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 4.2rem;
 }
 
 body {
@@ -133,7 +133,7 @@ a:active {
   width: fit-content;
 }
 
-.title::after,
+.title::before,
 .hero-headline-container::before {
   position: absolute;
   content: "";
@@ -148,7 +148,7 @@ a:active {
 
 .container {
   width: 95%;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 section,
@@ -163,10 +163,10 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  height: calc(100vh - 4rem);
+  height: 100vh;
   position: relative;
-  top: 100px;
   opacity: 0;
+  top: 50px;
 }
 
 a:link,

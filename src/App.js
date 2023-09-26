@@ -27,12 +27,12 @@ function App() {
         gsap.to(section, {
           scrollTrigger: {
             trigger: section,
-            toggleActions: "play none none reset",
-            start: "-40% end",
+            toggleActions: "play pause resume reset",
+            start: "-35% end",
             markers: true,
           },
-          y: -142,
-          duration: 3,
+          y: -50,
+          duration: 2.5,
           visibility: 1,
           opacity: 1,
         });
