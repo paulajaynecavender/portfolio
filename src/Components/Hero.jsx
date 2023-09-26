@@ -1,12 +1,10 @@
-// import SplitType from "split-type";
-
 const Hero = () => {
   return (
     <section className="hero section" id="hero">
       <div className="container">
         <div className="hero-headline-container">
           <div className="hero-name hero-text">
-            Hi! My name is <h2>Paula Cavender</h2>
+            Hi! My name is <h2 id="title">Paula Cavender</h2>
           </div>
           <div className="hero-description hero-text">
             I am a
