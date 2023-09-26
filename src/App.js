@@ -13,7 +13,6 @@ import { useLayoutEffect } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,11 +23,7 @@ function App() {
     // groups all animations to revert later
     let ctx = gsap.context((self) => {
       const sections = self.selector(".section");
-      const animation = self.selector("#title");
-      const title = new SplitType(animation);
-      console.log(title);
 
-      const char = self.selector(".char");
       sections.forEach((section) => {
         gsap.to(section, {
           scrollTrigger: {
@@ -36,20 +31,12 @@ function App() {
             toggleActions: "play pause resume reset",
             start: "top 60%",
             markers: true,
-            scrub: false,
           },
           duration: 3,
           visibility: 1,
           opacity: 1,
         });
-        gsap.to(char, { y: 10, stagger: 0.1, duration: 0.1, delay: 0.3 });
       });
-
-      // gsap.fromTo(
-      //   char,
-      //   { opacity: 0 },
-      //   { opacity: 1, duration: 0.3, stagger: 0.2, repeat: 0 }
-      // );
     }, component);
     // reverts all animations back to start
     return () => ctx.revert();

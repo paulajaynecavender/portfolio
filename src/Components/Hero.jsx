@@ -1,4 +1,4 @@
-const Hero = () => {
+const Hero = ({ titles }) => {
   return (
     <section className="hero section" id="hero">
       <div className="container">
