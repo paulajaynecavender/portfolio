@@ -8,8 +8,40 @@ import { useState } from "react";
 import "./CSS/styles.css";
 import FantasyFootball from "./Components/FantasyFootball";
 import Contact from "./Components/Contact";
+import { useRef } from "react";
+import { useLayoutEffect } from "react";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const component = useRef();
+
+  useLayoutEffect(() => {
+    // groups all animations to revert later
+    let ctx = gsap.context((self) => {
+      const sections = self.selector(".section");
+
+      sections.forEach((section) => {
+        gsap.to(section, {
+          scrollTrigger: {
+            trigger: section,
+            toggleActions: "play pause resume reset",
+            start: "top 60%",
+            markers: false,
+          },
+          duration: 3,
+          visibility: 1,
+          opacity: 1,
+        });
+      });
+    }, component);
+    // reverts all animations back to start
+    return () => ctx.revert();
+  }, []);
+
   const [toggleMenu, setToggleMenu] = useState(false);
   const [modal, setModal] = useState(false);
 
@@ -17,7 +49,7 @@ function App() {
     setToggleMenu(!toggleMenu);
   };
   return (
-    <div className="App">
+    <div className="App" ref={component}>
       <Header onClick={onClick} toggleMenu={toggleMenu} />
       <div className={!toggleMenu ? "main-container" : "main-container blur"}>
         <Hero />

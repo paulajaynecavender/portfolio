@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Darker Grotesque", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -127,13 +127,13 @@ a:active {
 .title,
 .hero-headline-container {
   font-size: 3rem;
-  padding: 0 1rem 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.title::after,
+.title::before,
 .hero-headline-container::before {
   position: absolute;
   content: "";
@@ -141,14 +141,14 @@ a:active {
   z-index: -5;
   width: 70%;
   background-color: #7464b2;
-  top: -2rem;
+  top: 1rem;
   left: 0.5rem;
   border-radius: 1rem;
 }
 
 .container {
   width: 95%;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 section,
@@ -163,8 +163,9 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  height: calc(100vh - 4rem);
+  height: 100vh;
   position: relative;
+  opacity: 0;
 }
 
 a:link,
