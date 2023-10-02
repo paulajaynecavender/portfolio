@@ -30,7 +30,7 @@ function App() {
             trigger: section,
             toggleActions: "play pause resume reset",
             start: "top 60%",
-            markers: true,
+            markers: false,
           },
           duration: 3,
           visibility: 1,
