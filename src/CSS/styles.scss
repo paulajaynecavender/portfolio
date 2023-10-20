@@ -21,10 +21,14 @@ $accent: #64b29b;
 
 /////////////// fonts ///////////////
 
-h1,
+h1 {
+  font-family: "Sulphur Point", sans-serif;
+}
 h2,
 h3,
-h4 {
+h4,
+.text-highlight {
+  text-transform: uppercase;
   font-family: "Sulphur Point", sans-serif;
 }
 
@@ -51,7 +55,7 @@ header {
 }
 header,
 footer {
-  background-color: $complementary;
+  background-color: $dominant;
 }
 .header {
   padding: 0 1.5rem;
@@ -61,8 +65,8 @@ footer {
   height: 4.2rem;
 }
 h1 {
-  font-size: 3rem;
-  color: $dominant;
+  font-size: 2.5rem;
+  color: $complementary;
 }
 .header-text {
   color: $dominant;
@@ -74,6 +78,14 @@ h1 {
   width: 100%;
 }
 
+.footer .container {
+  margin: 0 0 1rem 0;
+}
+.created-by {
+  display: flex;
+  flex-direction: column;
+}
+
 /////////////// nav ///////////////
 .nav {
   display: flex;
@@ -83,7 +95,6 @@ h1 {
 ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
 }
 
 // //// mobile nav ////
@@ -95,22 +106,26 @@ ul {
   height: calc(100vh - 4rem);
   width: 70%;
   padding-left: 0.5rem;
-  background-color: $complementary;
+  background-color: $dominant;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
   transform: translateX(-100%);
   transition: 1s ease-in-out;
+  align-items: center;
+  text-transform: capitalize;
 
   li {
-    font-size: 6rem;
+    font-size: 2.5rem;
     border-left: $dominant solid 0.5rem;
-    // padding: 0 2rem 1rem 0;
     list-style: none;
+    text-align: center;
+    :hover {
+      border-color: $accent;
+    }
   }
   a {
     padding-left: 1.5rem;
-    color: $dominant;
+    color: $complementary;
   }
   a:hover,
   a:active,
@@ -166,11 +181,11 @@ a:active {
 }
 
 .container {
-  width: 95%;
+  width: 98%;
   padding: 0 2rem;
+  margin: 4rem 0 4rem 0;
 }
 section,
-.contact .container,
 .header {
   margin: 0 auto;
   max-width: 140rem;
@@ -180,8 +195,8 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
-  height: 100vh;
+  // align-content: center;
+  // height: 100vh;
   position: relative;
   opacity: 0;
 }
@@ -201,20 +216,24 @@ a:visited {
   padding-left: 1rem;
 }
 /////////////// hero section ///////////////
-
+.hero {
+  align-content: center;
+  height: 100vh;
+}
 .hero .container {
+  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
-  padding: 0 3.4rem;
+  padding: 0 2rem;
 }
 
 .hero-description {
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   text-wrap: balance;
 }
 .hero-text {
-  line-height: 2.5rem;
-  font-size: 2.6rem;
+  line-height: 2.2rem;
+  font-size: 2rem;
 }
 .hero-img-container {
   margin: 0 auto;
@@ -223,14 +242,18 @@ a:visited {
   width: 17rem;
 }
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: $complementary;
-  line-height: 4.5rem;
-  margin: 1rem 0;
+  // line-height: 4.5rem;
+  margin: 0.5rem 0;
+  font-weight: normal;
 }
 .text-highlight {
   color: $complementary;
-  font-size: 3rem;
+  font-size: 6.7rem;
+  line-height: 6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 .arrow {
   position: absolute;
@@ -256,12 +279,16 @@ h2 {
 .hero-contact {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
-
+  justify-content: space-between;
+  max-width: 32rem;
+  margin-top: 2rem;
+  .button {
+    padding: 0.4rem;
+    margin: 0;
+  }
   img {
-    width: 5rem;
-    padding: 0.5rem;
+    width: 2rem;
+    padding-right: 0.3rem;
     margin: auto 0;
   }
   div:hover p {
@@ -272,7 +299,7 @@ h2 {
   }
   a {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
   }
 }
@@ -282,6 +309,7 @@ h2 {
   line-height: 1.5rem;
   text-align: center;
   color: $dominant;
+  padding-bottom: 0.6rem;
 }
 
 /////////////// skills section ///////////////
@@ -468,24 +496,16 @@ h4::after {
 
 /////////////// contact section ///////////////
 
-.contact-container {
-  .created-by {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 0 auto;
-  }
-}
 .link a:visited {
   color: #000;
 }
 
-.white-text {
-  color: $dominant;
+.footer-text {
+  color: $complementary;
   text-align: center;
   a:link,
   a:visited {
-    color: $dominant;
+    color: $complementary;
   }
 }
 
@@ -540,7 +560,10 @@ h4::after {
 /// ********* TABLET SCREEN ********* ///
 @media screen and (min-width: 768px) {
   /////////////// header & footer ///////////////
-
+  .created-by {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   /////////////// nav ///////////////
   .navbar-container {
     position: relative;
@@ -579,6 +602,11 @@ h4::after {
   }
 
   /////////////// main-content section ///////////////
+  section {
+    align-content: center;
+    height: calc(100vh - 1.5rem);
+  }
+
   .container {
     width: 100%;
   }
@@ -588,6 +616,8 @@ h4::after {
   /////////////// hero section ///////////////
   .hero .container {
     flex-direction: row;
+
+    // justify-content: space-evenly;
     // opacity: 0;
   }
   .hero-headline-container {
@@ -605,8 +635,6 @@ h4::after {
     width: 20rem;
   }
   .hero-contact {
-    justify-content: left;
-    max-width: 30rem;
     div {
       margin-right: 1rem;
     }
@@ -657,10 +685,6 @@ h4::after {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
-    .created-by {
-      margin: 0;
-    }
   }
   .contact-btn-container {
     align-items: center;

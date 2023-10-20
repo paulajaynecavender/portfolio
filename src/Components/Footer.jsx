@@ -4,9 +4,10 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="created-by ">
-            <p className="white-text">Designed and created by me</p>
+            <p className="footer-text">© Paula Cavender</p>
+            <p className="footer-text">Designed and created by me</p>
 
-            <p className="white-text">
+            <p className="footer-text">
               Check out the code{" "}
               <span className="link inline">
                 <a
@@ -19,7 +20,6 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <p className="white-text">© Paula Cavender</p>
         </div>
       </div>
     </footer>

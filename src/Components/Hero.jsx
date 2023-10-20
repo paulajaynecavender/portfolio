@@ -4,12 +4,11 @@ const Hero = ({ titles }) => {
       <div className="container">
         <div className="hero-headline-container">
           <div className="hero-name hero-text">
-            Hi! My name is <h2 id="title">Paula Cavender</h2>
+            Hi! I'm...<h2 id="title">Paula Cavender,</h2>
           </div>
+          <p className="text-highlight"> software engineer </p>
           <div className="hero-description hero-text">
-            I am a
-            <span className="text-highlight"> front-end web developer </span>
-            who enjoys making things and seeing my creations come to life.
+            I enjoy making things and seeing my creations come to life.
           </div>
           <div className="hero-contact">
             <div className="button">

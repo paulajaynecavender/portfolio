@@ -6,21 +6,9 @@ const Skills = () => {
           Tech Stack Skills
         </h3>
         <p className="description">
-          I specialise in React.js but am always keen to learn more!
+          I specialise in React.js and the front end.
         </p>
         <div className="icons-grid">
-          <div>
-            <img src="https://skillicons.dev/icons?i=html" alt="html icon" />
-            <p className="stack-name">HTML</p>
-          </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=css" alt="css icon" />
-            <p className="stack-name">CSS</p>
-          </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=sass" alt="sass icon" />
-            <p className="stack-name">SASS</p>
-          </div>
           <div>
             <img
               src="https://skillicons.dev/icons?i=javascript"
@@ -37,15 +25,25 @@ const Skills = () => {
             <p className="stack-name">Redux</p>
           </div>
           <div>
-            <img
-              src="https://skillicons.dev/icons?i=github"
-              alt="github icon"
-            />
-            <p className="stack-name">GitHub</p>
+            <img src="https://skillicons.dev/icons?i=nodejs" alt="sass icon" />
+            <p className="stack-name">Node</p>
           </div>
+
           <div>
             <img src="https://skillicons.dev/icons?i=git" alt="git icon" />
             <p className="stack-name">Git</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=html" alt="html icon" />
+            <p className="stack-name">HTML</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=css" alt="css icon" />
+            <p className="stack-name">CSS</p>
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=sass" alt="sass icon" />
+            <p className="stack-name">SASS</p>
           </div>
         </div>
       </div>

@@ -21,6 +21,7 @@ function App() {
 
   useLayoutEffect(() => {
     // groups all animations to revert later
+
     let ctx = gsap.context((self) => {
       const sections = self.selector(".section");
 
@@ -29,7 +30,7 @@ function App() {
           scrollTrigger: {
             trigger: section,
             toggleActions: "play pause resume reset",
-            start: "top 60%",
+            start: "top 80%",
             markers: false,
           },
           duration: 3,

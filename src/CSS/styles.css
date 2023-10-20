@@ -15,10 +15,15 @@ body {
   font-size: 2rem;
 }
 
-h1,
+h1 {
+  font-family: "Sulphur Point", sans-serif;
+}
+
 h2,
 h3,
-h4 {
+h4,
+.text-highlight {
+  text-transform: uppercase;
   font-family: "Sulphur Point", sans-serif;
 }
 
@@ -30,7 +35,7 @@ header {
 
 header,
 footer {
-  background-color: #7464b2;
+  background-color: #fff;
 }
 
 .header {
@@ -42,8 +47,8 @@ footer {
 }
 
 h1 {
-  font-size: 3rem;
-  color: #fff;
+  font-size: 2.5rem;
+  color: #7464b2;
 }
 
 .header-text {
@@ -57,6 +62,15 @@ h1 {
   width: 100%;
 }
 
+.footer .container {
+  margin: 0 0 1rem 0;
+}
+
+.created-by {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav {
   display: flex;
   justify-content: center;
@@ -66,7 +80,6 @@ h1 {
 ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
 }
 
 .nav-items {
@@ -76,21 +89,26 @@ ul {
   height: calc(100vh - 4rem);
   width: 70%;
   padding-left: 0.5rem;
-  background-color: #7464b2;
+  background-color: #fff;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
   transform: translateX(-100%);
   transition: 1s ease-in-out;
+  align-items: center;
+  text-transform: capitalize;
 }
 .nav-items li {
-  font-size: 6rem;
+  font-size: 2.5rem;
   border-left: #fff solid 0.5rem;
   list-style: none;
+  text-align: center;
+}
+.nav-items li :hover {
+  border-color: #64b29b;
 }
 .nav-items a {
   padding-left: 1.5rem;
-  color: #fff;
+  color: #7464b2;
 }
 .nav-items a:hover,
 .nav-items a:active,
@@ -147,12 +165,12 @@ a:active {
 }
 
 .container {
-  width: 95%;
+  width: 98%;
   padding: 0 2rem;
+  margin: 4rem 0 4rem 0;
 }
 
 section,
-.contact .container,
 .header {
   margin: 0 auto;
   max-width: 140rem;
@@ -162,8 +180,6 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
-  height: 100vh;
   position: relative;
   opacity: 0;
 }
@@ -186,20 +202,25 @@ a:visited {
   padding-left: 1rem;
 }
 
+.hero {
+  align-content: center;
+  height: 100vh;
+}
+
 .hero .container {
+  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
-  padding: 0 3.4rem;
+  padding: 0 2rem;
 }
 
 .hero-description {
-  margin-bottom: 2rem;
   text-wrap: balance;
 }
 
 .hero-text {
-  line-height: 2.5rem;
-  font-size: 2.6rem;
+  line-height: 2.2rem;
+  font-size: 2rem;
 }
 
 .hero-img-container {
@@ -211,15 +232,18 @@ a:visited {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #7464b2;
-  line-height: 4.5rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  font-weight: normal;
 }
 
 .text-highlight {
   color: #7464b2;
-  font-size: 3rem;
+  font-size: 6.7rem;
+  line-height: 6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .arrow {
@@ -247,12 +271,17 @@ h2 {
 .hero-contact {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
+  justify-content: space-between;
+  max-width: 32rem;
+  margin-top: 2rem;
+}
+.hero-contact .button {
+  padding: 0.4rem;
+  margin: 0;
 }
 .hero-contact img {
-  width: 5rem;
-  padding: 0.5rem;
+  width: 2rem;
+  padding-right: 0.3rem;
   margin: auto 0;
 }
 .hero-contact div:hover p {
@@ -263,7 +292,6 @@ h2 {
 }
 .hero-contact a {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -272,6 +300,7 @@ h2 {
   line-height: 1.5rem;
   text-align: center;
   color: #fff;
+  padding-bottom: 0.6rem;
 }
 
 .icons-grid {
@@ -451,24 +480,17 @@ h4::after {
   width: 100%;
 }
 
-.contact-container .created-by {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  margin: 0 auto;
-}
-
 .link a:visited {
   color: #000;
 }
 
-.white-text {
-  color: #fff;
+.footer-text {
+  color: #7464b2;
   text-align: center;
 }
-.white-text a:link,
-.white-text a:visited {
-  color: #fff;
+.footer-text a:link,
+.footer-text a:visited {
+  color: #7464b2;
 }
 
 .link {
@@ -523,6 +545,10 @@ h4::after {
 }
 
 @media screen and (min-width: 768px) {
+  .created-by {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   .navbar-container {
     position: relative;
   }
@@ -558,6 +584,10 @@ h4::after {
   .blur {
     filter: blur(0);
   }
+  section {
+    align-content: center;
+    height: calc(100vh - 1.5rem);
+  }
   .container {
     width: 100%;
   }
@@ -580,10 +610,6 @@ h4::after {
   }
   .hero-img {
     width: 20rem;
-  }
-  .hero-contact {
-    justify-content: left;
-    max-width: 30rem;
   }
   .hero-contact div {
     margin-right: 1rem;
@@ -615,9 +641,6 @@ h4::after {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
-  .contact-container .created-by {
-    margin: 0;
   }
   .contact-btn-container {
     align-items: center;
