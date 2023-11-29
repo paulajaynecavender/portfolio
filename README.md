@@ -1,3 +1,5 @@
 # Welcome to my porfolio!
-Feel free to have a browse.
 Live version: paulacavender.dev
+This is my portfolio to showcase my front end development work, this has been written in react.js.
+
+
